@@ -41,5 +41,13 @@ def is_in_venice(location_name):
         print("Error: Could not decode JSON response")
         return False
 
-# Example usage
-print(is_in_venice("Rielo"))  # Should return True if it's in Venice
+# Parse list of places from external dictionary
+
+# For each place, check if the place is in Venice.
+print(is_in_venice("Noale"))  # Should return True if it's in Venice
+# If true, return the co-ordinates
+
+# city, (latitude, longitude), [index1, index2, ... ]
+# Format
+#   {"name": {"coords":(la,ln),"indices":[]}, "wikidata":"True", "nominatim":"False", "Last one":"False"}
+# 1 for nominatim, 2 for wikidata, 3 for 
