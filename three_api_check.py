@@ -43,6 +43,35 @@ def nominatim_is_in_venice(location_name):
         return None
 
 # Check Wikidata
+def geodata_is_in_venice(location_name):
+    url = "http://api.geonames.org/searchJSON"
+    params = {"q": location_name, "maxRows": 10, "username": "cklplanet"}
+    try:
+        response = requests.get(url, params=params)
+        for place in response.json()['geonames']:
+            id = place['geonameId']
+            # Hierarchy entity inquiry
+            url = "http://api.geonames.org/hierarchyJSON"
+            params = {"geonameId": id, "username": "cklplanet"}
+            try:
+                response_city = requests.get(url, params=params)
+                geoname_id_to_find = 6542284 #Venice, the city
+                found = any(level.get("geonameId") == geoname_id_to_find for level in response_city.json()["geonames"])
+                if found:
+                    return (place['lat'], place['lng'])
+            except requests.exceptions.RequestException as e:
+                print(f"Request error: {e}")
+                return None
+            except ValueError:
+                print("Error: Could not decode JSON response")
+                return None
+        return None
+    except requests.exceptions.RequestException as e:
+        print(f"Request error: {e}")
+        return None
+    except ValueError:
+        print("Error: Could not decode JSON response")
+        return None
 
 # Check Last one
 
@@ -61,6 +90,9 @@ output = nominatim_is_in_venice(place)
 if output:
     print(f'name: {place}, coords: ({output[0]}, {output[1]}), nominatim')
     
+output = geodata_is_in_venice(place)
+if output:
+    print(f'name: {place}, coords: ({output[0]}, {output[1]}), geodata')
 
 # city, (latitude, longitude), [index1, index2, ... ]
 # Format
