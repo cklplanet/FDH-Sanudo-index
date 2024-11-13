@@ -4,6 +4,7 @@ from three_api_check import nominatim_is_in_venice, geodata_is_in_venice, wikida
 
 # Define the path to the JSON file
 json_file_path = os.path.join(os.getcwd(), "example_place_extraction_results.json")
+output_file_path = os.path.join(os.getcwd(), "place_verification_results.json")
 
 # Load the JSON data
 try:
@@ -14,51 +15,83 @@ except FileNotFoundError:
     print(f"File not found at path: {json_file_path}")
     exit()
 
-# Iterate over each place name in the JSON data and get coordinates from each API
-results_list = []
+# Set to keep track of already processed place names
+processed_names = set()
+existed_names = set()
 
+# Initialize the results list (if you want to update the file, keep track of previous results)
+if os.path.exists(output_file_path):
+    with open(output_file_path, "r", encoding="utf-8") as f:
+        results_list = json.load(f)
+        # Fill the existed_names set with the names already present in the results list
+        existed_names = {result["place_name"] for result in results_list}
+else:
+    results_list = []
+
+# To store results with unique IDs
+next_id = len(results_list) + 1
+
+# Calculate total unique places to process
+all_place_names = set()
 for place_group in data.keys():
-    place_names = eval(place_group)  # Converting string list to actual list
+    all_place_names.update(eval(place_group))  # Convert string list to an actual list and add to all_place_names
+
+total_places = len(all_place_names)
+processed_count = 0
+
+# Iterate over each place name in the JSON data and get coordinates from each API
+for place_group, columns in data.items():
+    place_names = eval(place_group)  # Convert string list to actual list
     
-    for place in place_names:
+    # Combine all place names (including alternative names)
+    all_names = set(place_names)  # Ensuring no duplicates within this set
+    
+    for place in all_names:
+        # Skip already processed place names
+        if place in processed_names or place in existed_names:
+            continue
+
         results = {
-            "name": place,
-            "coords": None,
-            "sources": {
-                "nominatim": False,
-                "geodata": False,
-                "wikidata": False
-            }
+            "id": next_id,
+            "place_name": place,
+            "place_alternative_name": list(all_names - {place}),  # Excluding the main name for alternatives
+            "place_index": columns,  # The column index from the JSON data
+            "latitude": None,
+            "longitude": None
         }
 
         # Check Nominatim
         nominatim_coords = nominatim_is_in_venice(place)
         if nominatim_coords:
-            results["coords"] = nominatim_coords  # Expecting (lat, lon)
-            results["sources"]["nominatim"] = True
+            results["latitude"], results["longitude"] = nominatim_coords
 
         # Check Geodata
         geodata_coords = geodata_is_in_venice(place)
         if geodata_coords:
-            results["coords"] = geodata_coords  # Expecting (lat, lon)
-            results["sources"]["geodata"] = True
+            results["latitude"], results["longitude"] = geodata_coords
 
-        # # Check Wikidata
-        # wikidata_coords = wikidata_is_in_venice(place)  # Each call should process independently
-        # if wikidata_coords and "coordinates" in wikidata_coords[0]:
-        #     results["coords"] = (
-        #         wikidata_coords[0]["coordinates"][0], 
-        #         wikidata_coords[0]["coordinates"][1]
-        #     )
-        #     results["sources"]["wikidata"] = True
-        # elif wikidata_coords:
-        #     print(f'name: {place}, Wikidata API returned unexpected structure: {wikidata_coords}')
-        #     continue  # Move to next place if unexpected structure appears
+        # Check Wikidata
+        wikidata_coords = wikidata_is_in_venice(place)
+        if wikidata_coords:
+            results["latitude"], results["longitude"] = wikidata_coords
 
-        # Only print and save the result if at least one API has returned coordinates
-        if any(results["sources"].values()):
-            print(f'name: {place}, coords: ({results["coords"][0]}, {results["coords"][1]}), sources: {", ".join([key for key, val in results["sources"].items() if val])}')
+        processed_names.add(place)
+
+        # Only add to the results list if we found coordinates for the place
+        if results["latitude"] is not None and results["longitude"] is not None:
             results_list.append(results)
+            next_id += 1  # Increment for the next unique id
 
-# Print or save final results
-print("Final Results:", results_list)
+        
+        # Update and display progress in the same line, ensuring the line is fully cleared
+        processed_count += 1
+        progress_percent = (processed_count / total_places) * 100
+        print(f"\rProcessing: '{place}', Completion: {progress_percent:.2f}%{' ' * 2}", end='')
+
+
+# Save the updated results to the output file (this will update the file with new results)
+with open(output_file_path, "w", encoding="utf-8") as f:
+    json.dump(results_list, f, ensure_ascii=False, indent=4)
+
+# Move to a new line after progress output is complete
+print("\nFinal Results have been saved to:", output_file_path)

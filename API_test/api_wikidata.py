@@ -1,7 +1,28 @@
 import requests
 
-def get_wikidata_info(entity_name):
-    # Step 1: Search for the entity to get its Wikidata ID
+def get_label_for_id(q_id):
+    """
+    Fetch the label for a given Wikidata entity ID.
+    """
+    url = "https://www.wikidata.org/w/api.php"
+    params = {
+        "action": "wbgetentities",
+        "ids": q_id,
+        "props": "labels",
+        "languages": "en",
+        "format": "json"
+    }
+    response = requests.get(url, params=params)
+    data = response.json()
+    entity = data.get("entities", {}).get(q_id, {})
+    label = entity.get("labels", {}).get("en", {}).get("value", q_id)  # Return ID if label is unavailable
+    return label
+
+
+def search_entity_id(entity_name):
+    """
+    Search for the entity on Wikidata and return a list of entity IDs found.
+    """
     search_url = "https://www.wikidata.org/w/api.php"
     search_params = {
         "action": "wbsearchentities",
@@ -11,147 +32,178 @@ def get_wikidata_info(entity_name):
     }
     
     response = requests.get(search_url, params=search_params)
-    search_results = response.json()
+    results = response.json().get('search', [])
     
-    # List of keywords to check for, related to Venice
-    venice_keywords = ["venice", "venetian", "venitian"]
-    
-    # # Print all search results to help identify the correct ID
-    # print("Search results:")
-    # for result in search_results['search']:
+    # # Display search results for validation
+    # print("Search results for verification:")
+    # entity_ids = []
+    # for result in results:
     #     print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
+    #     entity_ids.append(result['id'])
     
-    # List to hold all entity IDs that mention Venice-related keywords
-    relevant_entity_ids = []
-    
-    # Loop through the search results and find entities mentioning Venice-related keywords
-    for result in search_results['search']:
-        description = result.get("description", "").lower()
-        if any(keyword in description for keyword in venice_keywords):
-            relevant_entity_ids.append(result['id'])
-    
-    if not relevant_entity_ids:
-        # print("Could not find any entities mentioning Venice-related keywords.")
-        return None
-    
-    # Step 2: Get the entities' information using their Wikidata IDs
-    entities_info = []
-    
-    for entity_id in relevant_entity_ids:
-        entity_url = "https://www.wikidata.org/w/api.php"
-        entity_params = {
-            "action": "wbgetentities",
-            "ids": entity_id,
-            "props": "claims|labels",  # Include labels in the API request
-            "format": "json"
-        }
-        
-        entity_response = requests.get(entity_url, params=entity_params)
-        entity_data = entity_response.json()
-        
-        # # Print the entire claims and labels data to inspect it
-        # print(f"Claims data for Entity ID: {entity_id}:")
-        # print(entity_data)
-        
-        # Extract claims from the entity data
-        entity_info = entity_data['entities'][entity_id]
-        claims = entity_info.get('claims', {})
-        
-        # Safely extract labels
-        entity_label = entity_info.get('labels', {}).get('en', {}).get('value', 'Unknown')
-        
-        # Define relevant properties including Administration
-        relevant_properties = {
-            'P17': 'Country',
-            'P131': 'Province',
-            'P291': 'Locale',
-            'P625': 'Geography',
-            'P150': 'Metropolitan City',
-            'P36': 'Capital',
-            'P131_Admin': 'Administration'  # Using P131 again to capture administration levels
-        }
-        
-        # Initialize output structure dynamically
-        output = {label: 'Unknown' for _, label in relevant_properties.items()}
-        output['Geography'] = []  # Ensure Geography is a list to store coordinates
+    # # Return list of entity IDs
+    # return entity_ids if entity_ids else None
+    if results:
+        # Return the ID of the shortest result (based on the character length of the ID)
+        shortest_result = min(results, key=lambda result: len(result['id']))
+        return shortest_result['id']
+    return None
 
-        for prop, label in relevant_properties.items():
-            if prop in claims:
-                if prop == 'P625':  # Handling Geography for coordinates
-                    for item in claims[prop]:
-                        lat = item['mainsnak']['datavalue']['value']['latitude']
-                        lon = item['mainsnak']['datavalue']['value']['longitude']
-                        output['Geography'] = [f"{lat}, {lon}"]
-                else:
-                    # Collecting other location-related information
-                    item_ids = [item['mainsnak']['datavalue']['value']['id'] for item in claims[prop]]
-                    labels = get_labels_by_ids(item_ids)
-                    if labels:
-                        output[label] = labels  # Store all labels found
 
-        # Check if any location information contains "Venice"
-        is_in_venice = any(
-            "venice" in str(value).lower() 
-            for key, value in output.items() 
-            if isinstance(value, str) or isinstance(value, list)  # Check lists and strings
-            for label in (value if isinstance(value, list) else [value])
-        )
-        
-        # Prepare the result for this entity
-        entity_result = {
-            "is_in_Venice": is_in_venice,
-            "name": entity_label  # Use the safely extracted label
-        }
-        
-        # Add coordinates if the entity is in Venice
-        if is_in_venice and output['Geography']:
-            entity_result['coordinates'] = tuple(map(float, output['Geography'][0].split(',')))
-        
-        # Only append to the results if the entity is in Venice
-        if is_in_venice:
-            entities_info.append(entity_result)
-
-    # Return only the entities that are in Venice
-    return entities_info
-
-def get_labels_by_ids(q_ids):
-    if not q_ids:
-        return []
-
-    q_ids_str = '|'.join(q_ids)
-    label_url = "https://www.wikidata.org/w/api.php"
-    label_params = {
+def get_entity_data(entity_id):
+    """
+    Retrieve data for an entity, focusing on specific properties.
+    """
+    url = "https://www.wikidata.org/w/api.php"
+    params = {
         "action": "wbgetentities",
-        "ids": q_ids_str,
-        "props": "labels",
-        "format": "json",
-        "languages": "en"
+        "ids": entity_id,
+        "props": "claims",
+        "format": "json"
+    }
+    
+    response = requests.get(url, params=params)
+    data = response.json()
+    
+    claims = data['entities'][entity_id].get('claims', {})
+    
+    # Dictionary to store resolved data for each property
+    extracted_data = {}
+
+    # Properties to fetch
+    properties = {
+        'P276': 'Location',
+        'P131': 'Administrative Entity',
+        'P625': 'Coordinates',
+        'P17': 'Country',
+        'P291': 'Locale',
+        'P150': 'Metropolitan City',
+        'P36': 'Capital'
     }
 
-    label_response = requests.get(label_url, params=label_params)
-    label_data = label_response.json()
+    for prop, label in properties.items():
+        if prop in claims:
+            if prop == 'P625':  # Handle coordinates separately
+                coordinates = [
+                    (item['mainsnak']['datavalue']['value']['latitude'], 
+                     item['mainsnak']['datavalue']['value']['longitude'])
+                    for item in claims[prop]
+                    if 'datavalue' in item['mainsnak']  # Check for 'datavalue' key
+                ]
+                extracted_data[label] = coordinates
+            else:
+                # For other properties, resolve IDs to labels
+                ids = [
+                    item['mainsnak']['datavalue']['value']['id']
+                    for item in claims[prop]
+                    if 'datavalue' in item['mainsnak']  # Check for 'datavalue' key
+                ]
+                extracted_data[label] = [get_label_for_id(q_id) for q_id in ids]
+    
+    return extracted_data
 
-    if 'entities' not in label_data:
-        print("Error fetching labels:", label_data)
-        return []
 
-    labels = []
-    for entity_id, entity in label_data['entities'].items():
-        labels.append(entity.get('labels', {}).get('en', {}).get('value', entity_id))
+def get_venice_related_entities(entity_name):
+    """
+    Main pipeline to search for an entity, verify if it's related to Venice, 
+    and fetch relevant properties.
+    """
+    # Step 1: Search for the entity and get its ID(s)
+    entity_id = search_entity_id(entity_name)
+    if not entity_id:
+        # print(f"No entity found for '{entity_name}'")
+        return None
 
-    return labels
+    venice_keywords = ["venice", "venetian", "veneto", "venitian"]
+    related_entities = []
 
-# # Example usage
+    # for entity_id in entity_ids:
+    # Step 2: Retrieve data for the found entity ID
+    entity_data = get_entity_data(entity_id)
+    # Step 3: Check if any of the properties or descriptions contain Venice-related keywords
+    is_in_venice = any(
+        any(venice_keyword in str(value).lower() for venice_keyword in venice_keywords)
+        for key, values in entity_data.items()
+        for value in (values if isinstance(values, list) else [values])
+    )
+
+    # Check the description too
+    url = f"https://www.wikidata.org/w/api.php?action=wbgetentities&ids={entity_id}&props=descriptions&languages=en&format=json"
+    response = requests.get(url)
+    data = response.json()
+    description = data['entities'][entity_id].get('descriptions', {}).get('en', {}).get('value', "")
+
+    # Expand the check to include descriptions as well
+    is_in_venice = is_in_venice or any(keyword in description.lower() for keyword in venice_keywords)
+
+    # Step 4: If related to Venice, add to the list of related entities
+    if is_in_venice:
+        related_entities.append(entity_data)
+
+    # Consolidate the properties into one entry
+    consolidated_data = {
+        'Location': [],
+        'Administrative Entity': [],
+        'Coordinates': [],
+        'Country': [],
+        'Locale': [],
+        'Metropolitan City': [],
+        'Capital': []
+    }
+
+    for entity in related_entities:
+        for key, value in entity.items():
+            if isinstance(value, list):
+                consolidated_data[key].extend(v for v in value if v not in consolidated_data[key])
+            else:
+                if value not in consolidated_data[key]:
+                    consolidated_data[key].append(value)
+
+    # Filter out empty values
+    filtered_data = {key: value for key, value in consolidated_data.items() if value}
+
+    return filtered_data
+
+# place = "Venice" # 3 pass
+# place = "Murano" # 3 pass
+# place = "San Francesco della Vigna" # 3 pass
+# place = "Giudecca" # 3 pass
+# place = "Rialto Bridge" # 1 fail: wikidata
+# # place = "Noale" # 2 fail: wikidata, geodata
 # entity_name = "Rialto Bridge"
-# info = get_wikidata_info(entity_name)
-# print(info)
+# entity_info = get_venice_related_entities(entity_name)
+# print("Filtered Related Entity Information:", entity_info)
 
 def wikidata_is_in_venice(location_name):
     # Call get_wikidata_info and format the output
-    info = get_wikidata_info(location_name)
+    info = get_venice_related_entities(location_name)
     
     if info:
         # Return all entities that might be in Venice, with coordinates if available
-        return info
+        # return info
+        return info['Coordinates'][0]
     else:
         return None
+    
+
+# print(wikidata_is_in_venice("haa"))
+def show_all_the_ID (entity_name):
+    search_url = "https://www.wikidata.org/w/api.php"
+    search_params = {
+        "action": "wbsearchentities",
+        "search": entity_name,
+        "language": "en",
+        "format": "json"
+    }
+    
+    response = requests.get(search_url, params=search_params)
+    results = response.json().get('search', [])
+    
+    # Display search results for validation
+    print("Search results for verification:")
+    entity_ids = []
+    for result in results:
+        print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
+        entity_ids.append(result['id'])
+
+# print(wikidata_is_in_venice("Venice"))

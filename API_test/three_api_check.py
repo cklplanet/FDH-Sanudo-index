@@ -47,14 +47,13 @@ def geodata_is_in_venice(location_name):
 
 # Main script
 
-place = "Venice" # 3 pass
-place = "Murano" # 3 pass
-place = "San Francesco della Vigna" # 3 pass
-place = "Giudecca" # 3 pass
-
-place = "Rialto Bridge" # 1 fail: wikidata
-# place = "Noale" # 2 fail: wikidata, geodata
-def pipeline_check():
+# place = "Venice" # 3 pass
+# place = "Murano" # 3 pass
+# place = "San Francesco della Vigna" # 3 pass
+# place = "Giudecca" # 3 pass
+# place = "Rialto Bridge" # 1 fail: wikidata
+# # place = "Noale" # 2 fail: wikidata, geodata
+def pipeline_check(place):
 
     results = {
         "name": place,
@@ -79,11 +78,16 @@ def pipeline_check():
         results["sources"]["geodata"] = True
         print(f'name: {place}, coords: ({geodata_coords[0]}, {geodata_coords[1]}), source: geodata')
 
+    # wikidata_coords = wikidata_is_in_venice(place)
+    # if wikidata_coords:
+    #     results["coords"] = wikidata_coords[0]['coordinates']
+    #     results["sources"]["wikidata"] = True
+    #     print(f'name: {place}, coords: ({wikidata_coords[0]["coordinates"]}), source: wikidata')
     wikidata_coords = wikidata_is_in_venice(place)
     if wikidata_coords:
-        results["coords"] = wikidata_coords[0]['coordinates']
+        results["coords"] = wikidata_coords
         results["sources"]["wikidata"] = True
-        print(f'name: {place}, coords: ({wikidata_coords[0]["coordinates"]}), source: wikidata')
+        print(f'name: {place}, coords: ({wikidata_coords[0]}, {wikidata_coords[1]}), source: wikidata')
 
-
+# pipeline_check("Africa")
 # print(results)
