@@ -49,7 +49,7 @@ def nominatim_is_in_venice(location_name):
 
 # MAIN
 # Parse list of places from external dictionary
-place = "Guidecca"
+place = "Murano"
 # Create a local dictionary
 dict = []
 
