@@ -14,7 +14,7 @@ def get_wikidata_info(entity_name):
     search_results = response.json()
     
     # List of keywords to check for, related to Venice
-    venice_keywords = ["venice", "venetian", "italy", "venitian"]
+    venice_keywords = ["venice", "venetian", "venitian"]
     
     # # Print all search results to help identify the correct ID
     # print("Search results:")
@@ -31,7 +31,7 @@ def get_wikidata_info(entity_name):
             relevant_entity_ids.append(result['id'])
     
     if not relevant_entity_ids:
-        print("Could not find any entities mentioning Venice-related keywords.")
+        # print("Could not find any entities mentioning Venice-related keywords.")
         return None
     
     # Step 2: Get the entities' information using their Wikidata IDs
