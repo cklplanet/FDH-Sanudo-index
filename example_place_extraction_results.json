@@ -164,7 +164,7 @@
     "['Faraglione del porto', 'Farion']": [
         "609"
     ],
-    "['Algeri', 'al Zer, Zir']": [
+    "['Algeri', 'al Zer', ' Zir']": [
         "356",
         "421"
     ],
@@ -179,7 +179,7 @@
         "477",
         "478"
     ],
-    "['Ama o Gamah', 'Aman, Amaran, Arati', 'Siria']": [
+    "['Ama o Gamah', 'Aman', ' Amaran', ' Arati', 'Siria']": [
         "260",
         "526",
         "527",
@@ -805,7 +805,7 @@
         "506",
         "540"
     ],
-    "['Bruges', 'Bruggia, Burges, Brusa']": [
+    "['Bruges', 'Bruggia', ' Burges', ' Brusa']": [
         "103",
         "117",
         "118",
@@ -1040,7 +1040,7 @@
     "['Capo di S. Andrea', 'Cipro']": [
         "483"
     ],
-    "['Capodistria', 'Caodistria, Justmopol\u00f9']": [
+    "['Capodistria', 'Caodistria', ' Justmopol\u00f9']": [
         "135",
         "185",
         "302",
@@ -1273,7 +1273,7 @@
         "11",
         "58"
     ],
-    "['Cipro', 'Cypri, Cypro']": [
+    "['Cipro', 'Cypri', ' Cypro']": [
         "12",
         "17",
         "45",
@@ -2273,7 +2273,7 @@
         "451",
         "673"
     ],
-    "['Gravelines', 'Francia, Pas de Calais']": [
+    "['Gravelines', 'Francia', ' Pas de Calais']": [
         "29",
         "31",
         "46",
@@ -2311,7 +2311,7 @@
     "['Guinea']": [
         "338"
     ],
-    "['Guines', 'Quagnt, Gines', 'Francia']": [
+    "['Guines', 'Quagnt', ' Gines', 'Francia']": [
         "18",
         "19",
         "20",
@@ -2345,7 +2345,7 @@
     "['Hierapetra', 'Jerapetra', 'Candia']": [
         "402"
     ],
-    "['Homs', 'Opos, Otupso', 'Soria']": [
+    "['Homs', 'Opos', ' Otupso', 'Soria']": [
         "526",
         "586",
         "644"
@@ -2788,7 +2788,7 @@
     "['Manfredonia', 'Paglie']": [
         "493"
     ],
-    "['Mantova', 'Mantoa, Mantua']": [
+    "['Mantova', 'Mantoa', ' Mantua']": [
         "16",
         "53",
         "148",
@@ -3709,7 +3709,7 @@
         "172",
         "185"
     ],
-    "['Poissy', 'Poesi, Boesi', 'Francia']": [
+    "['Poissy', 'Poesi', ' Boesi', 'Francia']": [
         "64",
         "72",
         "94",
@@ -4236,7 +4236,7 @@
         "410",
         "413"
     ],
-    "['SdafTusa', 'Zaffussa, Suffusien', 'Sviner\u00e0']": [
+    "['SdafTusa', 'Zaffussa', ' Suffusien', 'Sviner\u00e0']": [
         "109",
         "453"
     ],
@@ -4445,7 +4445,7 @@
         "655",
         "656"
     ],
-    "['Southampton', 'Awtona, Altona', 'Inghilterra']": [
+    "['Southampton', 'Awtona', ' Altona', 'Inghilterra']": [
         "287",
         "399",
         "400",
@@ -4940,7 +4940,7 @@
         "406",
         "511"
     ],
-    "['VnlladoUt', 'Ti\u00ecadoUt, Slajadolo']": [
+    "['VnlladoUt', 'Ti\u00ecadoUt', ' Slajadolo']": [
         "199",
         "273",
         "275",
@@ -4968,7 +4968,7 @@
     "['Vasto', 'Guasto', 'napoletano']": [
         "553"
     ],
-    "['Venena', 'la terra, VemcjaOy Vemetia^ VenetimB']": [
+    "['Venena', 'la terra', ' VemcjaOy Vemetia^ VenetimB']": [
         "18",
         "39",
         "41",

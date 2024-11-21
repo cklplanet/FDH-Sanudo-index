@@ -24,7 +24,7 @@ def strip_non_numerical(s):
 def strip_non_alphabetical(s):
     # Use regex to match from the first to the last alphabetical character
     try:
-        match = re.search(r'[a-zA-Z()]+.*[a-zA-Z()]', s)
+        match = re.search(r'[a-zA-ZÀ-ÿ()]+.*[a-zA-ZÀ-ÿ()]', s, re.UNICODE)
     except:
         print(s)
     return match.group(0) if match else ''
@@ -64,6 +64,7 @@ def extract_location(file_path):
                 #print(current_indices)
                     current_location = strip_non_alphabetical(current_location)
                     current_location = extract_phrases(current_location)
+                    current_location = [item for element in current_location for item in element.split(',')]
                     current_indices = [strip_non_numerical(s) for s in current_indices if strip_non_numerical(s)]
                     if current_indices:
                         location_dict[str(current_location)] = current_indices
