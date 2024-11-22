@@ -56,6 +56,12 @@ for place_group, columns in data.items():
             "place_name": place,
             "place_alternative_name": list(all_names - {place}),  # Excluding the main name for alternatives
             "place_index": columns,  # The column index from the JSON data
+            "nominatim_coords": None,
+            "geodata_coords": None,
+            "wikidata_coords": None,
+            "nominatim_match": False,
+            "geodata_match": False,
+            "wikidata_match": False,
             "latitude": None,
             "longitude": None
         }
@@ -63,17 +69,28 @@ for place_group, columns in data.items():
         # Check Nominatim
         nominatim_coords = nominatim_is_in_venice(place)
         if nominatim_coords:
+            results["nominatim_coords"] = nominatim_coords
             results["latitude"], results["longitude"] = nominatim_coords
+            results["nominatim_match"] = True
 
         # Check Geodata
         geodata_coords = geodata_is_in_venice(place)
         if geodata_coords:
+            results["geodata_coords"] = geodata_coords
             results["latitude"], results["longitude"] = geodata_coords
+            results["geodata_match"] = True
 
         # Check Wikidata
         wikidata_coords = wikidata_is_in_venice(place)
         if wikidata_coords:
+            results["wikidata_coords"] = wikidata_coords
             results["latitude"], results["longitude"] = wikidata_coords
+            results["wikidata_match"] = True
+
+        # Check if the APIs return the same coordinates
+        coords = [nominatim_coords, geodata_coords, wikidata_coords]
+        unique_coords = {coord for coord in coords if coord}
+        results["agreement_count"] = len(unique_coords)
 
         processed_names.add(place)
 

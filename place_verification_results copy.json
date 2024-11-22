@@ -1,0 +1,1204 @@
+[
+    {
+        "id": 1,
+        "place_name": "Adige",
+        "place_alternative_name": [],
+        "place_index": [
+            "32",
+            "52",
+            "161",
+            "172",
+            "185"
+        ],
+        "latitude": 46.83536388888889,
+        "longitude": 10.515172222222223
+    },
+    {
+        "id": 2,
+        "place_name": "Belluno",
+        "place_alternative_name": [
+            "Citidal di Belun"
+        ],
+        "place_index": [
+            "36",
+            "100",
+            "203",
+            "642"
+        ],
+        "latitude": 46.140830555556,
+        "longitude": 12.215561111111
+    },
+    {
+        "id": 3,
+        "place_name": "Bergamo",
+        "place_alternative_name": [],
+        "place_index": [
+            "36"
+        ],
+        "latitude": 45.695,
+        "longitude": 9.67
+    },
+    {
+        "id": 4,
+        "place_name": "ItalU",
+        "place_alternative_name": [
+            "Bologna"
+        ],
+        "place_index": [
+            "78",
+            "118",
+            "149",
+            "168",
+            "192",
+            "276",
+            "447",
+            "448",
+            "512",
+            "557",
+            "595",
+            "646"
+        ],
+        "latitude": 42.5,
+        "longitude": 12.5
+    },
+    {
+        "id": 5,
+        "place_name": "Bottenigo",
+        "place_alternative_name": [
+            "estuario di YeneziaX"
+        ],
+        "place_index": [
+            "170"
+        ],
+        "latitude": "45.4622055",
+        "longitude": "12.2195361"
+    },
+    {
+        "id": 6,
+        "place_name": "Brentella",
+        "place_alternative_name": [],
+        "place_index": [
+            "109"
+        ],
+        "latitude": "45.46161",
+        "longitude": "12.26177"
+    },
+    {
+        "id": 7,
+        "place_name": "Brescia",
+        "place_alternative_name": [
+            "BrexaJ"
+        ],
+        "place_index": [
+            "36",
+            "51",
+            "55",
+            "56",
+            "60",
+            "65",
+            "66",
+            "67",
+            "73",
+            "94",
+            "101",
+            "115",
+            "160",
+            "171",
+            "177",
+            "195",
+            "200",
+            "204",
+            "211",
+            "223",
+            "259",
+            "270",
+            "298",
+            "322",
+            "330",
+            "334",
+            "335",
+            "345",
+            "382",
+            "383",
+            "385",
+            "446",
+            "462",
+            "463",
+            "468",
+            "501",
+            "504",
+            "518",
+            "532",
+            "565",
+            "600",
+            "648",
+            "661"
+        ],
+        "latitude": 45.538888888889,
+        "longitude": 10.220280555556
+    },
+    {
+        "id": 8,
+        "place_name": "Brussa",
+        "place_alternative_name": [
+            "Bursa",
+            "Asia minore"
+        ],
+        "place_index": [
+            "645"
+        ],
+        "latitude": "45.6570964",
+        "longitude": "12.9478833"
+    },
+    {
+        "id": 9,
+        "place_name": "Burano",
+        "place_alternative_name": [],
+        "place_index": [
+            "120"
+        ],
+        "latitude": 45.485555555556,
+        "longitude": 12.4175
+    },
+    {
+        "id": 10,
+        "place_name": "Candia",
+        "place_alternative_name": [
+            "città ed isoU"
+        ],
+        "place_index": [
+            "10",
+            "17",
+            "31",
+            "33",
+            "58",
+            "60",
+            "89",
+            "90",
+            "91",
+            "126",
+            "127",
+            "136",
+            "146",
+            "147",
+            "151",
+            "154",
+            "176",
+            "179",
+            "191",
+            "200",
+            "201",
+            "220",
+            "257",
+            "264",
+            "282",
+            "284",
+            "294",
+            "295",
+            "299",
+            "300",
+            "303",
+            "305",
+            "322",
+            "345",
+            "351",
+            "352",
+            "358",
+            "361",
+            "362",
+            "365",
+            "391",
+            "402",
+            "408",
+            "410",
+            "411",
+            "413",
+            "438",
+            "441",
+            "442",
+            "456",
+            "457",
+            "477",
+            "481",
+            "482",
+            "488",
+            "491",
+            "493"
+        ],
+        "latitude": 35.309722222222,
+        "longitude": 24.893333333333
+    },
+    {
+        "id": 11,
+        "place_name": "Capodistria",
+        "place_alternative_name": [
+            "Caodistria, Justmopolù"
+        ],
+        "place_index": [
+            "135",
+            "185",
+            "302",
+            "330",
+            "386",
+            "416",
+            "444",
+            "469",
+            "504",
+            "505",
+            "507",
+            "536",
+            "544"
+        ],
+        "latitude": 45.547542728,
+        "longitude": 13.7306571
+    },
+    {
+        "id": 12,
+        "place_name": "Castelfranco",
+        "place_alternative_name": [
+            "trevigiano"
+        ],
+        "place_index": [
+            "171",
+            "177",
+            "181",
+            "182",
+            "580"
+        ],
+        "latitude": 45.666666666667,
+        "longitude": 11.933333333333
+    },
+    {
+        "id": 13,
+        "place_name": "Chioggia",
+        "place_alternative_name": [
+            "Chioza"
+        ],
+        "place_index": [
+            "33",
+            "146",
+            "147",
+            "298",
+            "303",
+            "384",
+            "536"
+        ],
+        "latitude": 45.21891,
+        "longitude": 12.27854
+    },
+    {
+        "id": 14,
+        "place_name": "Dese",
+        "place_alternative_name": [],
+        "place_index": [
+            "169",
+            "170"
+        ],
+        "latitude": "45.5268006",
+        "longitude": "12.3034634"
+    },
+    {
+        "id": 15,
+        "place_name": "Marocco",
+        "place_alternative_name": [
+            "Fessa",
+            "Fez"
+        ],
+        "place_index": [
+            "186"
+        ],
+        "latitude": "45.5356403",
+        "longitude": "12.2348883"
+    },
+    {
+        "id": 16,
+        "place_name": "Fratta",
+        "place_alternative_name": [
+            "Polesine",
+            "la"
+        ],
+        "place_index": [
+            "143"
+        ],
+        "latitude": "45.8012623",
+        "longitude": "12.893015"
+    },
+    {
+        "id": 17,
+        "place_name": "veneziano",
+        "place_alternative_name": [
+            "Gambarare"
+        ],
+        "place_index": [
+            "194"
+        ],
+        "latitude": "45.49812",
+        "longitude": "12.21909"
+    },
+    {
+        "id": 18,
+        "place_name": "Gambarare",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "194"
+        ],
+        "latitude": 45.425277777778,
+        "longitude": 12.1525
+    },
+    {
+        "id": 19,
+        "place_name": "Gradisca",
+        "place_alternative_name": [],
+        "place_index": [
+            "62",
+            "308",
+            "330",
+            "496",
+            "550",
+            "564",
+            "566",
+            "557",
+            "584"
+        ],
+        "latitude": "45.7107807",
+        "longitude": "12.9803068"
+    },
+    {
+        "id": 20,
+        "place_name": "Italia",
+        "place_alternative_name": [],
+        "place_index": [
+            "30",
+            "46",
+            "61",
+            "64",
+            "94",
+            "95",
+            "100",
+            "111",
+            "113",
+            "114",
+            "117",
+            "121",
+            "164",
+            "167",
+            "168",
+            "178",
+            "255",
+            "268",
+            "273",
+            "275",
+            "276",
+            "278",
+            "283",
+            "202",
+            "309",
+            "327",
+            "340",
+            "387",
+            "388",
+            "389",
+            "403",
+            "405",
+            "406",
+            "408",
+            "450",
+            "476",
+            "478",
+            "479",
+            "480",
+            "490",
+            "498",
+            "512",
+            "554",
+            "558",
+            "591",
+            "595",
+            "615",
+            "618",
+            "621",
+            "635",
+            "636",
+            "662",
+            "666"
+        ],
+        "latitude": 42.5,
+        "longitude": 12.5
+    },
+    {
+        "id": 21,
+        "place_name": "Lizza Fusina",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "534",
+            "535"
+        ],
+        "latitude": "45.4323524",
+        "longitude": "12.316541"
+    },
+    {
+        "id": 22,
+        "place_name": "Marano",
+        "place_alternative_name": [
+            "FrìuliX"
+        ],
+        "place_index": [
+            "496",
+            "497",
+            "546",
+            "550",
+            "554",
+            "556",
+            "557",
+            "584"
+        ],
+        "latitude": "45.46311235",
+        "longitude": "12.120517939849389"
+    },
+    {
+        "id": 23,
+        "place_name": "Marghera",
+        "place_alternative_name": [
+            "veneziano",
+            "Margera"
+        ],
+        "place_index": [
+            "111",
+            "112",
+            "163",
+            "169",
+            "170",
+            "171",
+            "189",
+            "266"
+        ],
+        "latitude": 45.47547,
+        "longitude": 12.22465
+    },
+    {
+        "id": 24,
+        "place_name": "isola presso Venezia",
+        "place_alternative_name": [
+            "MaBEorbo"
+        ],
+        "place_index": [
+            "120"
+        ],
+        "latitude": "45.43704975",
+        "longitude": "12.336155768698458"
+    },
+    {
+        "id": 25,
+        "place_name": "Mestre",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "35",
+            "120",
+            "163",
+            "169",
+            "170",
+            "187",
+            "266"
+        ],
+        "latitude": "45.49167",
+        "longitude": "12.24538"
+    },
+    {
+        "id": 26,
+        "place_name": "Mirano",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "169"
+        ],
+        "latitude": "45.4927695",
+        "longitude": "12.1098768"
+    },
+    {
+        "id": 27,
+        "place_name": "Malvasia vecchia",
+        "place_alternative_name": [
+            "Grecia",
+            "Monembasia"
+        ],
+        "place_index": [
+            "58",
+            "286",
+            "402",
+            "629"
+        ],
+        "latitude": "45.43287707023478",
+        "longitude": "12.332320518633457"
+    },
+    {
+        "id": 28,
+        "place_name": "Murano",
+        "place_alternative_name": [
+            "isola presso Venezia"
+        ],
+        "place_index": [
+            "110",
+            "119",
+            "120",
+            "546"
+        ],
+        "latitude": 45.4575,
+        "longitude": 12.35361111111111
+    },
+    {
+        "id": 29,
+        "place_name": "Oriago",
+        "place_alternative_name": [
+            "veneziano",
+            "Uriago"
+        ],
+        "place_index": [
+            "66",
+            "145",
+            "146",
+            "180",
+            "199",
+            "205",
+            "259",
+            "279",
+            "280",
+            "281",
+            "282",
+            "283",
+            "468"
+        ],
+        "latitude": "45.4535425",
+        "longitude": "12.1738699"
+    },
+    {
+        "id": 30,
+        "place_name": "chiesa di s. Giustina",
+        "place_alternative_name": [],
+        "place_index": [
+            "134"
+        ],
+        "latitude": "45.438261499999996",
+        "longitude": "12.346292029028437"
+    },
+    {
+        "id": 31,
+        "place_name": "Baffo",
+        "place_alternative_name": [
+            "neir isola di Cipro",
+            "Pafo"
+        ],
+        "place_index": [
+            "127",
+            "260",
+            "367",
+            "438",
+            "454",
+            "456",
+            "457",
+            "482",
+            "549"
+        ],
+        "latitude": "45.437052324777014",
+        "longitude": "12.348469272328513"
+    },
+    {
+        "id": 32,
+        "place_name": "Ponente",
+        "place_alternative_name": [
+            "cioè stati e mari del ponente"
+        ],
+        "place_index": [
+            "58",
+            "143",
+            "299",
+            "454",
+            "457",
+            "485",
+            "493",
+            "577"
+        ],
+        "latitude": "45.51903715",
+        "longitude": "12.686205727401017"
+    },
+    {
+        "id": 33,
+        "place_name": "Raspo",
+        "place_alternative_name": [
+            "Istria"
+        ],
+        "place_index": [
+            "137",
+            "331"
+        ],
+        "latitude": "45.4856267",
+        "longitude": "12.4173817"
+    },
+    {
+        "id": 34,
+        "place_name": "Ravenna",
+        "place_alternative_name": [],
+        "place_index": [
+            "54",
+            "55",
+            "143",
+            "329",
+            "346",
+            "634"
+        ],
+        "latitude": 44.416111111111114,
+        "longitude": 12.201666666666666
+    },
+    {
+        "id": 35,
+        "place_name": "Castello",
+        "place_alternative_name": [
+            "y",
+            "Castello 8. Angelo"
+        ],
+        "place_index": [
+            "77",
+            "113",
+            "342",
+            "404",
+            "552"
+        ],
+        "latitude": 45.435694,
+        "longitude": 12.3485
+    },
+    {
+        "id": 36,
+        "place_name": "Salonicco",
+        "place_alternative_name": [],
+        "place_index": [
+            "70",
+            "323",
+            "361"
+        ],
+        "latitude": 40.640277777777776,
+        "longitude": 22.935555555555556
+    },
+    {
+        "id": 37,
+        "place_name": "Santo Stefano",
+        "place_alternative_name": [
+            "arcipelago"
+        ],
+        "place_index": [
+            "657"
+        ],
+        "latitude": "45.43365745",
+        "longitude": "12.331090715304633"
+    },
+    {
+        "id": 38,
+        "place_name": "Sumaga",
+        "place_alternative_name": [
+            "FrìuliX"
+        ],
+        "place_index": [
+            "419"
+        ],
+        "latitude": "45.7772968",
+        "longitude": "12.8003816"
+    },
+    {
+        "id": 39,
+        "place_name": "Treviso",
+        "place_alternative_name": [],
+        "place_index": [
+            "12",
+            "15",
+            "17",
+            "37",
+            "100",
+            "171",
+            "181",
+            "188",
+            "298",
+            "325",
+            "462",
+            "661",
+            "699",
+            "629",
+            "642",
+            "653",
+            "667"
+        ],
+        "latitude": 45.672219444444,
+        "longitude": 12.242219444444
+    },
+    {
+        "id": 40,
+        "place_name": "canal grande",
+        "place_alternative_name": [],
+        "place_index": [
+            "177",
+            "182",
+            "416",
+            "561",
+            "5ft2"
+        ],
+        "latitude": 45.44222222222222,
+        "longitude": 12.32638888888889
+    },
+    {
+        "id": 41,
+        "place_name": "Da Mosto",
+        "place_alternative_name": [],
+        "place_index": [
+            "50"
+        ],
+        "latitude": "45.52612055",
+        "longitude": "12.191523633098075"
+    },
+    {
+        "id": 42,
+        "place_name": "Malipiero",
+        "place_alternative_name": [],
+        "place_index": [
+            "384",
+            "397"
+        ],
+        "latitude": "45.43322",
+        "longitude": "12.32788"
+    },
+    {
+        "id": 43,
+        "place_name": "di s. Alvise",
+        "place_alternative_name": [],
+        "place_index": [
+            "117"
+        ],
+        "latitude": "45.4487043",
+        "longitude": "12.3295105"
+    },
+    {
+        "id": 44,
+        "place_name": "Venezia",
+        "place_alternative_name": [],
+        "place_index": [
+            "114",
+            "194",
+            "469",
+            "491"
+        ],
+        "latitude": 45.439722222222,
+        "longitude": 12.331944444444
+    },
+    {
+        "id": 45,
+        "place_name": "dei Birì",
+        "place_alternative_name": [],
+        "place_index": [
+            "593"
+        ],
+        "latitude": "45.44071038690553",
+        "longitude": "12.340345324249416"
+    },
+    {
+        "id": 46,
+        "place_name": "di 8. Benedetto",
+        "place_alternative_name": [],
+        "place_index": [
+            "429"
+        ],
+        "latitude": "45.4924715",
+        "longitude": "12.2340535"
+    },
+    {
+        "id": 47,
+        "place_name": "di 8. Croce",
+        "place_alternative_name": [],
+        "place_index": [
+            "462"
+        ],
+        "latitude": "45.6329113",
+        "longitude": "12.5212245"
+    },
+    {
+        "id": 48,
+        "place_name": "di 8. Giovanni nuovo",
+        "place_alternative_name": [],
+        "place_index": [
+            "71"
+        ],
+        "latitude": "45.435659900000005",
+        "longitude": "12.341329229620259"
+    },
+    {
+        "id": 49,
+        "place_name": "Zueca",
+        "place_alternative_name": [
+            "Giudecca"
+        ],
+        "place_index": [
+            "384",
+            "397",
+            "416",
+            "487"
+        ],
+        "latitude": 45.425,
+        "longitude": 12.328611111111
+    },
+    {
+        "id": 50,
+        "place_name": "Giudecca",
+        "place_alternative_name": [
+            "Zueca"
+        ],
+        "place_index": [
+            "384",
+            "397",
+            "416",
+            "487"
+        ],
+        "latitude": 45.425,
+        "longitude": 12.328611111111
+    },
+    {
+        "id": 51,
+        "place_name": "Lido",
+        "place_alternative_name": [
+            "San Nicolò"
+        ],
+        "place_index": [
+            "287"
+        ],
+        "latitude": "45.42894",
+        "longitude": "12.38897"
+    },
+    {
+        "id": 52,
+        "place_name": "del Lazzaretto nuovo",
+        "place_alternative_name": [],
+        "place_index": [
+            "54"
+        ],
+        "latitude": "45.45649",
+        "longitude": "12.38679"
+    },
+    {
+        "id": 53,
+        "place_name": "di 8. Giorgio in Alga",
+        "place_alternative_name": [],
+        "place_index": [
+            "448"
+        ],
+        "latitude": "45.48205851341436",
+        "longitude": "12.216642444658232"
+    },
+    {
+        "id": 54,
+        "place_name": "di 8. Michele",
+        "place_alternative_name": [],
+        "place_index": [
+            "212"
+        ],
+        "latitude": "45.6483798",
+        "longitude": "13.0605045"
+    },
+    {
+        "id": 55,
+        "place_name": "Palazzo ducale",
+        "place_alternative_name": [],
+        "place_index": [
+            "88",
+            "138",
+            "139",
+            "369",
+            "380",
+            "492",
+            "673"
+        ],
+        "latitude": 45.43366666666667,
+        "longitude": 12.340416666666666
+    },
+    {
+        "id": 56,
+        "place_name": "piazza di s. Marco",
+        "place_alternative_name": [],
+        "place_index": [
+            "51",
+            "181",
+            "399",
+            "585"
+        ],
+        "latitude": "45.43411",
+        "longitude": "12.33835"
+    },
+    {
+        "id": 57,
+        "place_name": "ponte della Paglia",
+        "place_alternative_name": [],
+        "place_index": [
+            "382",
+            "535"
+        ],
+        "latitude": 45.43358611,
+        "longitude": 12.34103889
+    },
+    {
+        "id": 58,
+        "place_name": "della",
+        "place_alternative_name": [
+            "Procuratia",
+            "casa"
+        ],
+        "place_index": [
+            "399",
+            "441"
+        ],
+        "latitude": "45.43062",
+        "longitude": "12.33471"
+    },
+    {
+        "id": 59,
+        "place_name": "Rialto",
+        "place_alternative_name": [],
+        "place_index": [
+            "37",
+            "46",
+            "76",
+            "88",
+            "90",
+            "96",
+            "145",
+            "150",
+            "190",
+            "193",
+            "204",
+            "279",
+            "280",
+            "281",
+            "262",
+            "333",
+            "336",
+            "351",
+            "354",
+            "394",
+            "401",
+            "402",
+            "412",
+            "415",
+            "416",
+            "426",
+            "465",
+            "487",
+            "504",
+            "559",
+            "562",
+            "569",
+            "606",
+            "610",
+            "630"
+        ],
+        "latitude": "45.43804",
+        "longitude": "12.3359"
+    },
+    {
+        "id": 60,
+        "place_name": "riva del Ferro",
+        "place_alternative_name": [
+            "ora del vino"
+        ],
+        "place_index": [
+            "144"
+        ],
+        "latitude": "45.437478759133775",
+        "longitude": "12.335683387392088"
+    },
+    {
+        "id": 61,
+        "place_name": "San Marco",
+        "place_alternative_name": [],
+        "place_index": [
+            "89",
+            "177",
+            "190",
+            "257",
+            "271",
+            "280",
+            "281",
+            "282",
+            "352",
+            "385",
+            "426",
+            "466",
+            "487",
+            "504",
+            "559",
+            "562",
+            "569",
+            "606",
+            "670"
+        ],
+        "latitude": 45.434,
+        "longitude": 12.333
+    },
+    {
+        "id": 62,
+        "place_name": "di Dorsoduro",
+        "place_alternative_name": [
+            "Osso duro"
+        ],
+        "place_index": [
+            "283",
+            "462"
+        ],
+        "latitude": "45.43129",
+        "longitude": "12.32537"
+    },
+    {
+        "id": 63,
+        "place_name": "Zecca",
+        "place_alternative_name": [],
+        "place_index": [
+            "425"
+        ],
+        "latitude": 45.43333333333333,
+        "longitude": 12.339166666666667
+    },
+    {
+        "id": 64,
+        "place_name": "Verona",
+        "place_alternative_name": [],
+        "place_index": [
+            "12",
+            "32",
+            "34",
+            "35",
+            "39",
+            "46",
+            "47",
+            "57",
+            "61",
+            "65",
+            "66",
+            "75",
+            "95",
+            "117",
+            "118",
+            "135",
+            "143",
+            "144",
+            "148",
+            "155",
+            "157",
+            "16",
+            "163",
+            "168",
+            "172",
+            "178",
+            "191",
+            "196",
+            "200",
+            "204",
+            "211",
+            "259",
+            "270",
+            "278",
+            "294",
+            "302",
+            "308",
+            "313",
+            "322",
+            "325",
+            "326",
+            "330",
+            "331",
+            "350",
+            "351",
+            "402",
+            "407",
+            "418",
+            "419",
+            "448",
+            "451",
+            "458",
+            "159",
+            "462",
+            "463",
+            "477",
+            "488",
+            "492",
+            "518",
+            "537",
+            "541",
+            "545",
+            "561",
+            "564",
+            "670",
+            "584",
+            "607",
+            "608",
+            "612",
+            "616",
+            "628",
+            "629",
+            "640",
+            "641",
+            "646",
+            "648",
+            "652",
+            "660",
+            "661",
+            "662",
+            "668"
+        ],
+        "latitude": 45.43861111111111,
+        "longitude": 10.992777777777778
+    },
+    {
+        "id": 65,
+        "place_name": "Zara",
+        "place_alternative_name": [],
+        "place_index": [
+            "15",
+            "33",
+            "58",
+            "141",
+            "142",
+            "155",
+            "257",
+            "313",
+            "321",
+            "322",
+            "339",
+            "382",
+            "383",
+            "392",
+            "411",
+            "419",
+            "455",
+            "466",
+            "467",
+            "509",
+            "549",
+            "570",
+            "574",
+            "575",
+            "589",
+            "503",
+            "594",
+            "606",
+            "612",
+            "613",
+            "614",
+            "624",
+            "643",
+            "652",
+            "653",
+            "662",
+            "670"
+        ],
+        "latitude": 44.117,
+        "longitude": 15.2355
+    }
+]
