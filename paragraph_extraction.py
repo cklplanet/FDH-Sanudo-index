@@ -49,4 +49,4 @@ def process_columns(selection):
             continue
 
 
-process_columns(range(469,679))
+process_columns(range(1,679))
