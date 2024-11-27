@@ -1,8 +1,9 @@
 import json
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Load results into a DataFrame
-output_file_path = "../place_verification_results.json"
+output_file_path = "data_analysis_results.json"
 results_df = pd.read_json(output_file_path)
 
 print(results_df.head())  # Inspect the first few rows
@@ -19,12 +20,20 @@ api_success = {
 api_success_rate = {k: f"{v / total_places * 100:.2f}%" for k, v in api_success.items()}
 print("API Success Rates:", api_success_rate)
 
+# Plot success rates for each API
+plt.figure(figsize=(8, 5))
+plt.bar(api_success.keys(), api_success.values(), color=["blue", "green", "orange"])
+plt.title("API Success Comparison", fontsize=14)
+plt.xlabel("API", fontsize=12)
+plt.ylabel("Number of Matches", fontsize=12)
+plt.xticks(fontsize=10)
+plt.yticks(fontsize=10)
+plt.show()
+
 # Agreement stats
 agreement_counts = results_df["agreement_count"].value_counts()
 print("Agreement Counts:")
 print(agreement_counts)
-
-import matplotlib.pyplot as plt
 
 # Plot agreement count distribution
 agreement_counts.plot(kind='bar', title="API Agreement Levels", xlabel="Number of Unique Coordinate Sets", ylabel="Frequency")

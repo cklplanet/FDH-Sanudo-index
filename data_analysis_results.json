@@ -1,0 +1,1839 @@
+[
+    {
+        "id": 1,
+        "place_name": "Adige",
+        "place_alternative_name": [],
+        "place_index": [
+            "32",
+            "52",
+            "161",
+            "172",
+            "185"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            46.83536388888889,
+            10.515172222222223
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 46.83536388888889,
+        "longitude": 10.515172222222223,
+        "agreement_count": 1
+    },
+    {
+        "id": 2,
+        "place_name": "Belluno",
+        "place_alternative_name": [
+            "Citidal di Belun"
+        ],
+        "place_index": [
+            "36",
+            "100",
+            "203",
+            "642"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            46.140830555556,
+            12.215561111111
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 46.140830555556,
+        "longitude": 12.215561111111,
+        "agreement_count": 1
+    },
+    {
+        "id": 3,
+        "place_name": "Bergamo",
+        "place_alternative_name": [],
+        "place_index": [
+            "36"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.695,
+            9.67
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.695,
+        "longitude": 9.67,
+        "agreement_count": 1
+    },
+    {
+        "id": 4,
+        "place_name": "ItalU",
+        "place_alternative_name": [
+            "Bologna"
+        ],
+        "place_index": [
+            "78",
+            "118",
+            "149",
+            "168",
+            "192",
+            "276",
+            "447",
+            "448",
+            "512",
+            "557",
+            "595",
+            "646"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            42.5,
+            12.5
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 42.5,
+        "longitude": 12.5,
+        "agreement_count": 1
+    },
+    {
+        "id": 5,
+        "place_name": "Bottenigo",
+        "place_alternative_name": [
+            "estuario di YeneziaX"
+        ],
+        "place_index": [
+            "170"
+        ],
+        "nominatim_coords": [
+            "45.4621432",
+            "12.219725"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4621432",
+        "longitude": "12.219725",
+        "agreement_count": 1
+    },
+    {
+        "id": 6,
+        "place_name": "Brentella",
+        "place_alternative_name": [],
+        "place_index": [
+            "109"
+        ],
+        "nominatim_coords": [
+            "45.46362110011067",
+            "12.261749419829439"
+        ],
+        "geodata_coords": [
+            "45.46161",
+            "12.26177"
+        ],
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": false,
+        "latitude": "45.46161",
+        "longitude": "12.26177",
+        "agreement_count": 2
+    },
+    {
+        "id": 7,
+        "place_name": "Brescia",
+        "place_alternative_name": [
+            "BrexaJ"
+        ],
+        "place_index": [
+            "36",
+            "51",
+            "55",
+            "56",
+            "60",
+            "65",
+            "66",
+            "67",
+            "73",
+            "94",
+            "101",
+            "115",
+            "160",
+            "171",
+            "177",
+            "195",
+            "200",
+            "204",
+            "211",
+            "223",
+            "259",
+            "270",
+            "298",
+            "322",
+            "330",
+            "334",
+            "335",
+            "345",
+            "382",
+            "383",
+            "385",
+            "446",
+            "462",
+            "463",
+            "468",
+            "501",
+            "504",
+            "518",
+            "532",
+            "565",
+            "600",
+            "648",
+            "661"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.538888888889,
+            10.220280555556
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.538888888889,
+        "longitude": 10.220280555556,
+        "agreement_count": 1
+    },
+    {
+        "id": 8,
+        "place_name": "Brussa",
+        "place_alternative_name": [
+            "Asia minore",
+            "Bursa"
+        ],
+        "place_index": [
+            "645"
+        ],
+        "nominatim_coords": [
+            "45.6570964",
+            "12.9478833"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.6570964",
+        "longitude": "12.9478833",
+        "agreement_count": 1
+    },
+    {
+        "id": 9,
+        "place_name": "Burano",
+        "place_alternative_name": [],
+        "place_index": [
+            "120"
+        ],
+        "nominatim_coords": [
+            "45.485376599999995",
+            "12.417520773688814"
+        ],
+        "geodata_coords": [
+            "45.48627",
+            "12.41725"
+        ],
+        "wikidata_coords": [
+            45.485555555556,
+            12.4175
+        ],
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": true,
+        "latitude": 45.485555555556,
+        "longitude": 12.4175,
+        "agreement_count": 3
+    },
+    {
+        "id": 10,
+        "place_name": "Candia",
+        "place_alternative_name": [
+            "città ed isoU"
+        ],
+        "place_index": [
+            "10",
+            "17",
+            "31",
+            "33",
+            "58",
+            "60",
+            "89",
+            "90",
+            "91",
+            "126",
+            "127",
+            "136",
+            "146",
+            "147",
+            "151",
+            "154",
+            "176",
+            "179",
+            "191",
+            "200",
+            "201",
+            "220",
+            "257",
+            "264",
+            "282",
+            "284",
+            "294",
+            "295",
+            "299",
+            "300",
+            "303",
+            "305",
+            "322",
+            "345",
+            "351",
+            "352",
+            "358",
+            "361",
+            "362",
+            "365",
+            "391",
+            "402",
+            "408",
+            "410",
+            "411",
+            "413",
+            "438",
+            "441",
+            "442",
+            "456",
+            "457",
+            "477",
+            "481",
+            "482",
+            "488",
+            "491",
+            "493"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            35.309722222222,
+            24.893333333333
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 35.309722222222,
+        "longitude": 24.893333333333,
+        "agreement_count": 1
+    },
+    {
+        "id": 11,
+        "place_name": "Capodistria",
+        "place_alternative_name": [
+            " Justmopolù",
+            "Caodistria"
+        ],
+        "place_index": [
+            "135",
+            "185",
+            "302",
+            "330",
+            "386",
+            "416",
+            "444",
+            "469",
+            "504",
+            "505",
+            "507",
+            "536",
+            "544"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.547542728,
+            13.7306571
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.547542728,
+        "longitude": 13.7306571,
+        "agreement_count": 1
+    },
+    {
+        "id": 12,
+        "place_name": "Castelfranco",
+        "place_alternative_name": [
+            "trevigiano"
+        ],
+        "place_index": [
+            "171",
+            "177",
+            "181",
+            "182",
+            "580"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.666666666667,
+            11.933333333333
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.666666666667,
+        "longitude": 11.933333333333,
+        "agreement_count": 1
+    },
+    {
+        "id": 13,
+        "place_name": "Chioggia",
+        "place_alternative_name": [
+            "Chioza"
+        ],
+        "place_index": [
+            "33",
+            "146",
+            "147",
+            "298",
+            "303",
+            "384",
+            "536"
+        ],
+        "nominatim_coords": [
+            "45.218894",
+            "12.2785805"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.21891,
+            12.27854
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.21891,
+        "longitude": 12.27854,
+        "agreement_count": 2
+    },
+    {
+        "id": 14,
+        "place_name": "Dese",
+        "place_alternative_name": [],
+        "place_index": [
+            "169",
+            "170"
+        ],
+        "nominatim_coords": [
+            "45.5268006",
+            "12.3034634"
+        ],
+        "geodata_coords": [
+            "45.52962",
+            "12.30363"
+        ],
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": false,
+        "latitude": "45.52962",
+        "longitude": "12.30363",
+        "agreement_count": 2
+    },
+    {
+        "id": 15,
+        "place_name": "Marocco",
+        "place_alternative_name": [
+            "Fessa",
+            "Fez"
+        ],
+        "place_index": [
+            "186"
+        ],
+        "nominatim_coords": [
+            "45.5356403",
+            "12.2348883"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.5356403",
+        "longitude": "12.2348883",
+        "agreement_count": 1
+    },
+    {
+        "id": 16,
+        "place_name": "Fratta",
+        "place_alternative_name": [
+            "la",
+            "Polesine"
+        ],
+        "place_index": [
+            "143"
+        ],
+        "nominatim_coords": [
+            "45.8012623",
+            "12.893015"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.8012623",
+        "longitude": "12.893015",
+        "agreement_count": 1
+    },
+    {
+        "id": 17,
+        "place_name": "veneziano",
+        "place_alternative_name": [
+            "Gambarare"
+        ],
+        "place_index": [
+            "194"
+        ],
+        "nominatim_coords": [
+            "45.4653057",
+            "12.1176521"
+        ],
+        "geodata_coords": [
+            "45.49812",
+            "12.21909"
+        ],
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": false,
+        "latitude": "45.49812",
+        "longitude": "12.21909",
+        "agreement_count": 2
+    },
+    {
+        "id": 18,
+        "place_name": "Gambarare",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "194"
+        ],
+        "nominatim_coords": [
+            "45.419566",
+            "12.1491449"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.425277777778,
+            12.1525
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.425277777778,
+        "longitude": 12.1525,
+        "agreement_count": 2
+    },
+    {
+        "id": 19,
+        "place_name": "Gradisca",
+        "place_alternative_name": [],
+        "place_index": [
+            "62",
+            "308",
+            "330",
+            "496",
+            "550",
+            "564",
+            "566",
+            "557",
+            "584"
+        ],
+        "nominatim_coords": [
+            "45.710285619488076",
+            "12.983527358289223"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.710285619488076",
+        "longitude": "12.983527358289223",
+        "agreement_count": 1
+    },
+    {
+        "id": 20,
+        "place_name": "Italia",
+        "place_alternative_name": [],
+        "place_index": [
+            "30",
+            "46",
+            "61",
+            "64",
+            "94",
+            "95",
+            "100",
+            "111",
+            "113",
+            "114",
+            "117",
+            "121",
+            "164",
+            "167",
+            "168",
+            "178",
+            "255",
+            "268",
+            "273",
+            "275",
+            "276",
+            "278",
+            "283",
+            "202",
+            "309",
+            "327",
+            "340",
+            "387",
+            "388",
+            "389",
+            "403",
+            "405",
+            "406",
+            "408",
+            "450",
+            "476",
+            "478",
+            "479",
+            "480",
+            "490",
+            "498",
+            "512",
+            "554",
+            "558",
+            "591",
+            "595",
+            "615",
+            "618",
+            "621",
+            "635",
+            "636",
+            "662",
+            "666"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            42.5,
+            12.5
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 42.5,
+        "longitude": 12.5,
+        "agreement_count": 1
+    },
+    {
+        "id": 21,
+        "place_name": "Lizza Fusina",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "534",
+            "535"
+        ],
+        "nominatim_coords": [
+            "45.432318741558184",
+            "12.316465383774547"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.432318741558184",
+        "longitude": "12.316465383774547",
+        "agreement_count": 1
+    },
+    {
+        "id": 22,
+        "place_name": "Marano",
+        "place_alternative_name": [
+            "FrìuliX"
+        ],
+        "place_index": [
+            "496",
+            "497",
+            "546",
+            "550",
+            "554",
+            "556",
+            "557",
+            "584"
+        ],
+        "nominatim_coords": [
+            "45.46311235",
+            "12.120517939849389"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.46311235",
+        "longitude": "12.120517939849389",
+        "agreement_count": 1
+    },
+    {
+        "id": 23,
+        "place_name": "Marghera",
+        "place_alternative_name": [
+            "veneziano",
+            "Margera"
+        ],
+        "place_index": [
+            "111",
+            "112",
+            "163",
+            "169",
+            "170",
+            "171",
+            "189",
+            "266"
+        ],
+        "nominatim_coords": [
+            "45.4758097",
+            "12.2247811"
+        ],
+        "geodata_coords": [
+            "45.45111",
+            "12.22389"
+        ],
+        "wikidata_coords": [
+            45.47547,
+            12.22465
+        ],
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": true,
+        "latitude": 45.47547,
+        "longitude": 12.22465,
+        "agreement_count": 3
+    },
+    {
+        "id": 24,
+        "place_name": "isola presso Venezia",
+        "place_alternative_name": [
+            "MaBEorbo"
+        ],
+        "place_index": [
+            "120"
+        ],
+        "nominatim_coords": [
+            "45.43704975",
+            "12.336155768698458"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.43704975",
+        "longitude": "12.336155768698458",
+        "agreement_count": 1
+    },
+    {
+        "id": 25,
+        "place_name": "Mestre",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "35",
+            "120",
+            "163",
+            "169",
+            "170",
+            "187",
+            "266"
+        ],
+        "nominatim_coords": [
+            "45.4943063",
+            "12.2418053"
+        ],
+        "geodata_coords": [
+            "45.49167",
+            "12.24538"
+        ],
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": false,
+        "latitude": "45.49167",
+        "longitude": "12.24538",
+        "agreement_count": 2
+    },
+    {
+        "id": 26,
+        "place_name": "Mirano",
+        "place_alternative_name": [
+            "veneziano"
+        ],
+        "place_index": [
+            "169"
+        ],
+        "nominatim_coords": [
+            "45.4927695",
+            "12.1098768"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4927695",
+        "longitude": "12.1098768",
+        "agreement_count": 1
+    },
+    {
+        "id": 27,
+        "place_name": "Malvasia vecchia",
+        "place_alternative_name": [
+            "Monembasia",
+            "Grecia"
+        ],
+        "place_index": [
+            "58",
+            "286",
+            "402",
+            "629"
+        ],
+        "nominatim_coords": [
+            "45.43287707023478",
+            "12.332320518633457"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.43287707023478",
+        "longitude": "12.332320518633457",
+        "agreement_count": 1
+    },
+    {
+        "id": 28,
+        "place_name": "Murano",
+        "place_alternative_name": [
+            "isola presso Venezia"
+        ],
+        "place_index": [
+            "110",
+            "119",
+            "120",
+            "546"
+        ],
+        "nominatim_coords": [
+            "45.4554971",
+            "12.3510992"
+        ],
+        "geodata_coords": [
+            "45.45857",
+            "12.35683"
+        ],
+        "wikidata_coords": [
+            45.4575,
+            12.35361111111111
+        ],
+        "nominatim_match": true,
+        "geodata_match": true,
+        "wikidata_match": true,
+        "latitude": 45.4575,
+        "longitude": 12.35361111111111,
+        "agreement_count": 3
+    },
+    {
+        "id": 29,
+        "place_name": "Oriago",
+        "place_alternative_name": [
+            "Uriago",
+            "veneziano"
+        ],
+        "place_index": [
+            "66",
+            "145",
+            "146",
+            "180",
+            "199",
+            "205",
+            "259",
+            "279",
+            "280",
+            "281",
+            "282",
+            "283",
+            "468"
+        ],
+        "nominatim_coords": [
+            "45.4535425",
+            "12.1738699"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4535425",
+        "longitude": "12.1738699",
+        "agreement_count": 1
+    },
+    {
+        "id": 30,
+        "place_name": "chiesa di s. Giustina",
+        "place_alternative_name": [],
+        "place_index": [
+            "134"
+        ],
+        "nominatim_coords": [
+            "45.438261499999996",
+            "12.346292029028437"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.438261499999996",
+        "longitude": "12.346292029028437",
+        "agreement_count": 1
+    },
+    {
+        "id": 31,
+        "place_name": "Baffo",
+        "place_alternative_name": [
+            "Pafo",
+            "neir isola di Cipro"
+        ],
+        "place_index": [
+            "127",
+            "260",
+            "367",
+            "438",
+            "454",
+            "456",
+            "457",
+            "482",
+            "549"
+        ],
+        "nominatim_coords": [
+            "45.43691885497536",
+            "12.348699812604218"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.43691885497536",
+        "longitude": "12.348699812604218",
+        "agreement_count": 1
+    },
+    {
+        "id": 32,
+        "place_name": "Ponente",
+        "place_alternative_name": [
+            "cioè stati e mari del ponente"
+        ],
+        "place_index": [
+            "58",
+            "143",
+            "299",
+            "454",
+            "457",
+            "485",
+            "493",
+            "577"
+        ],
+        "nominatim_coords": [
+            "45.51903715",
+            "12.686205727401017"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.51903715",
+        "longitude": "12.686205727401017",
+        "agreement_count": 1
+    },
+    {
+        "id": 33,
+        "place_name": "Raspo",
+        "place_alternative_name": [
+            "Istria"
+        ],
+        "place_index": [
+            "137",
+            "331"
+        ],
+        "nominatim_coords": [
+            "45.4856267",
+            "12.4173817"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4856267",
+        "longitude": "12.4173817",
+        "agreement_count": 1
+    },
+    {
+        "id": 34,
+        "place_name": "Ravenna",
+        "place_alternative_name": [],
+        "place_index": [
+            "54",
+            "55",
+            "143",
+            "329",
+            "346",
+            "634"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            44.416111111111114,
+            12.201666666666666
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 44.416111111111114,
+        "longitude": 12.201666666666666,
+        "agreement_count": 1
+    },
+    {
+        "id": 35,
+        "place_name": "Castello",
+        "place_alternative_name": [
+            "Castello 8. Angelo",
+            "y"
+        ],
+        "place_index": [
+            "77",
+            "113",
+            "342",
+            "404",
+            "552"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.435694,
+            12.3485
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.435694,
+        "longitude": 12.3485,
+        "agreement_count": 1
+    },
+    {
+        "id": 36,
+        "place_name": "Salonicco",
+        "place_alternative_name": [],
+        "place_index": [
+            "70",
+            "323",
+            "361"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            40.640277777777776,
+            22.935555555555556
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 40.640277777777776,
+        "longitude": 22.935555555555556,
+        "agreement_count": 1
+    },
+    {
+        "id": 37,
+        "place_name": "Santo Stefano",
+        "place_alternative_name": [
+            "arcipelago"
+        ],
+        "place_index": [
+            "657"
+        ],
+        "nominatim_coords": [
+            "45.43365745",
+            "12.331090715304633"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.43365745",
+        "longitude": "12.331090715304633",
+        "agreement_count": 1
+    },
+    {
+        "id": 38,
+        "place_name": "Sumaga",
+        "place_alternative_name": [
+            "FrìuliX"
+        ],
+        "place_index": [
+            "419"
+        ],
+        "nominatim_coords": [
+            "45.7772968",
+            "12.8003816"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.7772968",
+        "longitude": "12.8003816",
+        "agreement_count": 1
+    },
+    {
+        "id": 39,
+        "place_name": "Treviso",
+        "place_alternative_name": [],
+        "place_index": [
+            "12",
+            "15",
+            "17",
+            "37",
+            "100",
+            "171",
+            "181",
+            "188",
+            "298",
+            "325",
+            "462",
+            "661",
+            "699",
+            "629",
+            "642",
+            "653",
+            "667"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.672219444444,
+            12.242219444444
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.672219444444,
+        "longitude": 12.242219444444,
+        "agreement_count": 1
+    },
+    {
+        "id": 40,
+        "place_name": "canal grande",
+        "place_alternative_name": [],
+        "place_index": [
+            "177",
+            "182",
+            "416",
+            "561",
+            "5ft2"
+        ],
+        "nominatim_coords": [
+            "45.43777295172513",
+            "12.335590408970237"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.44222222222222,
+            12.32638888888889
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.44222222222222,
+        "longitude": 12.32638888888889,
+        "agreement_count": 2
+    },
+    {
+        "id": 41,
+        "place_name": "Da Mosto",
+        "place_alternative_name": [],
+        "place_index": [
+            "50"
+        ],
+        "nominatim_coords": [
+            "45.52612055",
+            "12.191523633098075"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.52612055",
+        "longitude": "12.191523633098075",
+        "agreement_count": 1
+    },
+    {
+        "id": 42,
+        "place_name": "Malipiero",
+        "place_alternative_name": [],
+        "place_index": [
+            "384",
+            "397"
+        ],
+        "nominatim_coords": [
+            "45.43331305",
+            "12.328256152029113"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.43331305",
+        "longitude": "12.328256152029113",
+        "agreement_count": 1
+    },
+    {
+        "id": 43,
+        "place_name": "di s. Alvise",
+        "place_alternative_name": [],
+        "place_index": [
+            "117"
+        ],
+        "nominatim_coords": [
+            "45.448688849999996",
+            "12.329503093752738"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.448688849999996",
+        "longitude": "12.329503093752738",
+        "agreement_count": 1
+    },
+    {
+        "id": 44,
+        "place_name": "Venezia",
+        "place_alternative_name": [],
+        "place_index": [
+            "114",
+            "194",
+            "469",
+            "491"
+        ],
+        "nominatim_coords": [
+            "45.4371908",
+            "12.3345898"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.439722222222,
+            12.331944444444
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.439722222222,
+        "longitude": 12.331944444444,
+        "agreement_count": 2
+    },
+    {
+        "id": 45,
+        "place_name": "dei Birì",
+        "place_alternative_name": [],
+        "place_index": [
+            "593"
+        ],
+        "nominatim_coords": [
+            "45.44071038690553",
+            "12.340345324249416"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.44071038690553",
+        "longitude": "12.340345324249416",
+        "agreement_count": 1
+    },
+    {
+        "id": 46,
+        "place_name": "di 8. Benedetto",
+        "place_alternative_name": [],
+        "place_index": [
+            "429"
+        ],
+        "nominatim_coords": [
+            "45.4924715",
+            "12.2340535"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4924715",
+        "longitude": "12.2340535",
+        "agreement_count": 1
+    },
+    {
+        "id": 47,
+        "place_name": "di 8. Croce",
+        "place_alternative_name": [],
+        "place_index": [
+            "462"
+        ],
+        "nominatim_coords": [
+            "45.6329113",
+            "12.5212245"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.6329113",
+        "longitude": "12.5212245",
+        "agreement_count": 1
+    },
+    {
+        "id": 48,
+        "place_name": "di 8. Giovanni nuovo",
+        "place_alternative_name": [],
+        "place_index": [
+            "71"
+        ],
+        "nominatim_coords": [
+            "45.435659900000005",
+            "12.341329229620259"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.435659900000005",
+        "longitude": "12.341329229620259",
+        "agreement_count": 1
+    },
+    {
+        "id": 49,
+        "place_name": "Zueca",
+        "place_alternative_name": [
+            "Giudecca"
+        ],
+        "place_index": [
+            "384",
+            "397",
+            "416",
+            "487"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.425,
+            12.328611111111
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.425,
+        "longitude": 12.328611111111,
+        "agreement_count": 1
+    },
+    {
+        "id": 50,
+        "place_name": "Giudecca",
+        "place_alternative_name": [
+            "Zueca"
+        ],
+        "place_index": [
+            "384",
+            "397",
+            "416",
+            "487"
+        ],
+        "nominatim_coords": [
+            "45.42608215",
+            "12.318262236791242"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.425,
+            12.328611111111
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.425,
+        "longitude": 12.328611111111,
+        "agreement_count": 2
+    },
+    {
+        "id": 51,
+        "place_name": "Lido",
+        "place_alternative_name": [
+            "San Nicolò"
+        ],
+        "place_index": [
+            "287"
+        ],
+        "nominatim_coords": [
+            "45.4164594",
+            "12.3706115"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4164594",
+        "longitude": "12.3706115",
+        "agreement_count": 1
+    },
+    {
+        "id": 52,
+        "place_name": "di 8. Giorgio in Alga",
+        "place_alternative_name": [],
+        "place_index": [
+            "448"
+        ],
+        "nominatim_coords": [
+            "45.481567",
+            "12.2164347"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.481567",
+        "longitude": "12.2164347",
+        "agreement_count": 1
+    },
+    {
+        "id": 53,
+        "place_name": "di 8. Michele",
+        "place_alternative_name": [],
+        "place_index": [
+            "212"
+        ],
+        "nominatim_coords": [
+            "45.6483798",
+            "13.0605045"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.6483798",
+        "longitude": "13.0605045",
+        "agreement_count": 1
+    },
+    {
+        "id": 54,
+        "place_name": "Palazzo ducale",
+        "place_alternative_name": [],
+        "place_index": [
+            "88",
+            "138",
+            "139",
+            "369",
+            "380",
+            "492",
+            "673"
+        ],
+        "nominatim_coords": [
+            "45.4342108",
+            "12.34059203398846"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.43366666666667,
+            12.340416666666666
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.43366666666667,
+        "longitude": 12.340416666666666,
+        "agreement_count": 2
+    },
+    {
+        "id": 55,
+        "place_name": "ponte della Paglia",
+        "place_alternative_name": [],
+        "place_index": [
+            "382",
+            "535"
+        ],
+        "nominatim_coords": [
+            "45.433650400000005",
+            "12.341001061764722"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.43358611,
+            12.34103889
+        ],
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.43358611,
+        "longitude": 12.34103889,
+        "agreement_count": 2
+    },
+    {
+        "id": 56,
+        "place_name": "Rialto",
+        "place_alternative_name": [],
+        "place_index": [
+            "37",
+            "46",
+            "76",
+            "88",
+            "90",
+            "96",
+            "145",
+            "150",
+            "190",
+            "193",
+            "204",
+            "279",
+            "280",
+            "281",
+            "262",
+            "333",
+            "336",
+            "351",
+            "354",
+            "394",
+            "401",
+            "402",
+            "412",
+            "415",
+            "416",
+            "426",
+            "465",
+            "487",
+            "504",
+            "559",
+            "562",
+            "569",
+            "606",
+            "610",
+            "630"
+        ],
+        "nominatim_coords": [
+            "45.3434137",
+            "12.0329713"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.3434137",
+        "longitude": "12.0329713",
+        "agreement_count": 1
+    },
+    {
+        "id": 57,
+        "place_name": "riva del Ferro",
+        "place_alternative_name": [
+            "ora del vino"
+        ],
+        "place_index": [
+            "144"
+        ],
+        "nominatim_coords": [
+            "45.4374777",
+            "12.3356824"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.4374777",
+        "longitude": "12.3356824",
+        "agreement_count": 1
+    },
+    {
+        "id": 58,
+        "place_name": "San Marco",
+        "place_alternative_name": [],
+        "place_index": [
+            "89",
+            "177",
+            "190",
+            "257",
+            "271",
+            "280",
+            "281",
+            "282",
+            "352",
+            "385",
+            "426",
+            "466",
+            "487",
+            "504",
+            "559",
+            "562",
+            "569",
+            "606",
+            "670"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.434,
+            12.333
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.434,
+        "longitude": 12.333,
+        "agreement_count": 1
+    },
+    {
+        "id": 59,
+        "place_name": "di Dorsoduro",
+        "place_alternative_name": [
+            "Osso duro"
+        ],
+        "place_index": [
+            "283",
+            "462"
+        ],
+        "nominatim_coords": [
+            "45.43313225",
+            "12.31903382892057"
+        ],
+        "geodata_coords": null,
+        "wikidata_coords": null,
+        "nominatim_match": true,
+        "geodata_match": false,
+        "wikidata_match": false,
+        "latitude": "45.43313225",
+        "longitude": "12.31903382892057",
+        "agreement_count": 1
+    },
+    {
+        "id": 60,
+        "place_name": "Zecca",
+        "place_alternative_name": [],
+        "place_index": [
+            "425"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.43333333333333,
+            12.339166666666667
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.43333333333333,
+        "longitude": 12.339166666666667,
+        "agreement_count": 1
+    },
+    {
+        "id": 61,
+        "place_name": "Verona",
+        "place_alternative_name": [],
+        "place_index": [
+            "12",
+            "32",
+            "34",
+            "35",
+            "39",
+            "46",
+            "47",
+            "57",
+            "61",
+            "65",
+            "66",
+            "75",
+            "95",
+            "117",
+            "118",
+            "135",
+            "143",
+            "144",
+            "148",
+            "155",
+            "157",
+            "16",
+            "163",
+            "168",
+            "172",
+            "178",
+            "191",
+            "196",
+            "200",
+            "204",
+            "211",
+            "259",
+            "270",
+            "278",
+            "294",
+            "302",
+            "308",
+            "313",
+            "322",
+            "325",
+            "326",
+            "330",
+            "331",
+            "350",
+            "351",
+            "402",
+            "407",
+            "418",
+            "419",
+            "448",
+            "451",
+            "458",
+            "159",
+            "462",
+            "463",
+            "477",
+            "488",
+            "492",
+            "518",
+            "537",
+            "541",
+            "545",
+            "561",
+            "564",
+            "670",
+            "584",
+            "607",
+            "608",
+            "612",
+            "616",
+            "628",
+            "629",
+            "640",
+            "641",
+            "646",
+            "648",
+            "652",
+            "660",
+            "661",
+            "662",
+            "668"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.43861111111111,
+            10.992777777777778
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.43861111111111,
+        "longitude": 10.992777777777778,
+        "agreement_count": 1
+    },
+    {
+        "id": 62,
+        "place_name": "Zara",
+        "place_alternative_name": [],
+        "place_index": [
+            "15",
+            "33",
+            "58",
+            "141",
+            "142",
+            "155",
+            "257",
+            "313",
+            "321",
+            "322",
+            "339",
+            "382",
+            "383",
+            "392",
+            "411",
+            "419",
+            "455",
+            "466",
+            "467",
+            "509",
+            "549",
+            "570",
+            "574",
+            "575",
+            "589",
+            "503",
+            "594",
+            "606",
+            "612",
+            "613",
+            "614",
+            "624",
+            "643",
+            "652",
+            "653",
+            "662",
+            "670"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            44.117,
+            15.2355
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 44.117,
+        "longitude": 15.2355,
+        "agreement_count": 1
+    }
+]

@@ -1200,5 +1200,29 @@
         ],
         "latitude": 44.117,
         "longitude": 15.2355
+    },
+    {
+        "id": 66,
+        "place_name": "Adige",
+        "place_alternative_name": [],
+        "place_index": [
+            "32",
+            "52",
+            "161",
+            "172",
+            "185"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            46.83536388888889,
+            10.515172222222223
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 46.83536388888889,
+        "longitude": 10.515172222222223,
+        "agreement_count": 1
     }
 ]
