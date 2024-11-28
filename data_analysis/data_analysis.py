@@ -39,6 +39,8 @@ print(agreement_counts)
 agreement_counts.plot(kind='bar', title="API Agreement Levels", xlabel="Number of Unique Coordinate Sets", ylabel="Frequency")
 plt.show()
 
+# TODO: Check confidence interval and whether there is a strong disagreement or a weak disagreement
+
 # Filter rows with disagreements
 disagreements = results_df[results_df["agreement_count"] > 1]
 print(f"Number of Disagreements: {len(disagreements)}")
