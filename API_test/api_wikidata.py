@@ -120,6 +120,9 @@ def get_venice_related_entities(entity_name):
     # for entity_id in entity_ids:
     # Step 2: Retrieve data for the found entity ID
     entity_data = get_entity_data(entity_id)
+
+    if "italy" in entity_name.lower():
+        return None
     # Step 3: Check if any of the properties or descriptions contain Venice-related keywords
     is_in_venice = any(
         any(venice_keyword in str(value).lower() for venice_keyword in venice_keywords)
@@ -206,4 +209,4 @@ def show_all_the_ID (entity_name):
         print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
 
-# print(wikidata_is_in_venice("Venice"))
+print(wikidata_is_in_venice("Giudecca"))
