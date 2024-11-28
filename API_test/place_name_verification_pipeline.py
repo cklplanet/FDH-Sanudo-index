@@ -5,7 +5,6 @@ from three_api_check import nominatim_is_in_venice, geodata_is_in_venice, wikida
 # Define the path to the JSON file
 json_file_path = os.path.join(os.getcwd(), "example_place_extraction_results.json")
 output_file_path = os.path.join(os.getcwd(), "data_analysis_results.json") # or data_analysis_results.json
-# Note by Maitri: For now, the output is data_analysis_results to store the new format. 
 
 # Load the JSON data
 try:
@@ -54,7 +53,7 @@ try:
           existing_result = next((result for result in results_list if result["place_name"] == place), None)
 
           #  Skip already processed place names
-          if place in processed_names or place in existed_names:
+          if place in processed_names or place in existed_names or place == 'veneziano':
               continue
 
           results = {

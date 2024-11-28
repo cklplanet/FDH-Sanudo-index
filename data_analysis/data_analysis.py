@@ -1,9 +1,10 @@
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
+from geopy.distance import geodesic
 
 # Load results into a DataFrame
-output_file_path = "data_analysis_results.json"
+output_file_path = "data_analysis/data_analysis_results.json"
 results_df = pd.read_json(output_file_path)
 
 print(results_df.head())  # Inspect the first few rows
@@ -39,7 +40,6 @@ print(agreement_counts)
 agreement_counts.plot(kind='bar', title="API Agreement Levels", xlabel="Number of Unique Coordinate Sets", ylabel="Frequency")
 plt.show()
 
-# TODO: Check confidence interval and whether there is a strong disagreement or a weak disagreement
 
 # Filter rows with disagreements
 disagreements = results_df[results_df["agreement_count"] > 1]
@@ -53,11 +53,63 @@ plt.xlabel("Number of Unique Coordinate Sets")
 plt.ylabel("Frequency")
 plt.show()
 
+################## CHECK COORDINATE DIFFERENCE #############################
+
+# Function to calculate the Haversine distance between two coordinates
+def calculate_distance(coord1, coord2):
+    return geodesic(coord1, coord2).meters  # returns distance in meters
+
+# Check for small or large coordinate differences
+threshold_small_distance = 100  # Small distance threshold in meters (100 meters)
+threshold_large_distance = 1000  # Large distance threshold in meters (1000 meters)
+
+potential_conflicts = []
+
+for index, row in results_df.iterrows():
+    # Initialize a list to store available coordinates
+    coordinates = []
+
+    # Check which coordinates are available
+    if row['nominatim_coords']:
+        coordinates.append(('nominatim', (row['nominatim_coords'][0], row['nominatim_coords'][1])))
+    if row['geodata_coords']:
+        coordinates.append(('geodata', (row['geodata_coords'][0], row['geodata_coords'][1])))
+    if row['wikidata_coords']:
+        coordinates.append(('wikidata', (row['wikidata_coords'][0], row['wikidata_coords'][1])))
+
+    # If at least two coordinates are available, calculate distances between them
+    if len(coordinates) >= 2:
+        for i in range(len(coordinates)):
+            for j in range(i + 1, len(coordinates)):
+                coord1_label, coord1 = coordinates[i]
+                coord2_label, coord2 = coordinates[j]
+
+                distance = calculate_distance(coord1, coord2)
+
+                # Check if the distance is large
+                if distance > threshold_large_distance:
+                    potential_conflicts.append({
+                        "place_name": row['place_name'],
+                        f"{coord1_label}_coords": coord1,
+                        f"{coord2_label}_coords": coord2,
+                        "distance": distance
+                    })
+
+# Print or display places with large coordinate differences
+if potential_conflicts:
+    print("\nPotential Conflicts (Large Distance Differences):")
+    for conflict in potential_conflicts:
+        print(f"\nPlace: {conflict['place_name']}")
+        print(f"  Coordinates for {list(conflict.keys())[1]}: {conflict[list(conflict.keys())[1]]}")
+        print(f"  Coordinates for {list(conflict.keys())[2]}: {conflict[list(conflict.keys())[2]]}")
+        print(f"  Distance: {conflict['distance']} meters")
+
 summary = {
     "Total Places Processed": total_places,
     "API Success Rates": api_success_rate,
     "Disagreements": len(disagreements),
-    "Agreement Distribution": agreement_counts.to_dict()
+    "Agreement Distribution": agreement_counts.to_dict(),
+    "Potential Conflicts (Large Distance Differences)": len(potential_conflicts)
 }
 
 print(json.dumps(summary, indent=4))
