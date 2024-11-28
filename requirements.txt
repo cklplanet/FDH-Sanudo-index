@@ -1,0 +1,2 @@
+flask        # If you're building an API
+pytest       # For testing
