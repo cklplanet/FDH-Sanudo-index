@@ -5,7 +5,7 @@ from difflib import SequenceMatcher
 from fuzzysearch import find_near_matches
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import spacy
+#import spacy
 
 class TextMatcher:
     def __init__(self, method="exact", **kwargs):
@@ -13,14 +13,14 @@ class TextMatcher:
         Initialize the matcher with a specific method and optional parameters.
 
         Parameters:
-        - method: str, the matching method ("exact", "fuzzywuzzy", "difflib", "regex", "fuzzysearch", "cosine", "semantic")
+        - method: str, the matching method ("exact", "regex", "fuzzywuzzy", "difflib", "fuzzysearch", "cosine", "semantic").
         - kwargs: Additional parameters for specific methods (e.g., threshold, max_dist).
         """
         self.method = method
         self.kwargs = kwargs
         self.nlp = None
-        if method == "semantic":
-            self.nlp = spacy.load("en_core_web_sm")
+        #if method == "semantic":
+            #self.nlp = spacy.load("en_core_web_sm")
 
     def match(self, content, keyword):
         """
@@ -33,59 +33,94 @@ class TextMatcher:
         Returns:
         - bool: True if a match is found, False otherwise.
         """
-        if self.method == "exact":
-            return keyword in content
-
-        elif self.method == "fuzzywuzzy":
-            threshold = self.kwargs.get("threshold", 80)
-            sentences = content.split('\n')
-            return any(fuzz.partial_ratio(keyword.lower(), sentence.lower()) >= threshold for sentence in sentences)
-
-        elif self.method == "difflib":
-            threshold = self.kwargs.get("threshold", 0.8)
-            sentences = content.split('\n')
-            return any(SequenceMatcher(None, keyword.lower(), sentence.lower()).ratio() >= threshold for sentence in sentences)
-
-        elif self.method == "regex":
-            pattern = re.compile(re.escape(keyword), re.IGNORECASE)
-            return bool(pattern.search(content))
-
-        elif self.method == "fuzzysearch":
-            max_dist = self.kwargs.get("max_dist", 2)
-            matches = find_near_matches(keyword, content, max_l_dist=max_dist)
-            return bool(matches)
-
-        elif self.method == "cosine":
-            threshold = self.kwargs.get("threshold", 0.7)
-            vectorizer = TfidfVectorizer().fit_transform([content, keyword])
-            similarity_matrix = cosine_similarity(vectorizer)
-            return similarity_matrix[0, 1] >= threshold
-
-        elif self.method == "semantic":
-            threshold = self.kwargs.get("threshold", 0.7)
-            doc_content = self.nlp(content)
-            doc_keyword = self.nlp(keyword)
-            return doc_content.similarity(doc_keyword) >= threshold
-
+        if self.method in {"exact", "regex"}:
+            return self._match_exact_or_regex(content, keyword)
         else:
-            raise ValueError(f"Unknown matching method: {self.method}")
+            return self._match_similarity_based(content, keyword)
 
-# Example usage:
-#def process_files_with_configurable_matching(base_dir, segment_number, keyword, match_method="exact", **kwargs):
-    #matcher = TextMatcher(method=match_method, **kwargs)
-    #current_dir = os.path.join(base_dir, f'segment_{segment_number}')
-    #current_files = get_sorted_files(current_dir, segment_number)
+    def _match_exact_or_regex(self, content, keyword):
+        """
+        Match content using exact or regex methods, considering slice variations.
 
-    #for filename in current_files:
-        filepath = os.path.join(current_dir, filename)
-        content = read_content(filepath)
+        Parameters:
+        - content: str, the text to search in.
+        - keyword: str, the keyword or phrase to search for.
 
-        if matcher.match(content, keyword):
-            # Handle matched files as before
-            print(f"Match found in file: {filename}")
-            # Process the file (e.g., generate working text)
+        Returns:
+        - bool: True if a match is found, False otherwise.
+        """
+        keyword_lengths = [len(keyword) - 1, len(keyword), len(keyword) + 1]
 
+        for key_len in keyword_lengths:
+            if key_len < 1:  # Skip invalid slice lengths
+                continue
 
+            for i in range(len(content) - key_len + 1):
+                slice_text = content[i:i + key_len]
+                sliced_key = keyword[0:key_len]
+
+                if self.method == "exact":
+                    if sliced_key.lower() == slice_text.lower():
+                        return True
+
+                elif self.method == "regex":
+                    pattern = re.compile(re.escape(sliced_key), re.IGNORECASE)
+                    if pattern.fullmatch(slice_text):
+                        return True
+
+        return False
+
+    def _match_similarity_based(self, content, keyword):
+        """
+        Match content using similarity-based methods by iterating through slices.
+
+        Parameters:
+        - content: str, the text to search in.
+        - keyword: str, the keyword or phrase to search for.
+
+        Returns:
+        - bool: True if a match is found, False otherwise.
+        """
+        keyword_lengths = [len(keyword) - 1, len(keyword), len(keyword) + 1]
+        threshold = self.kwargs.get("threshold", 0.8 if self.method in {"difflib", "cosine"} else 80)
+        max_dist = self.kwargs.get("max_dist", 2)  # For fuzzysearch
+
+        for key_len in keyword_lengths:
+            if key_len < 1:  # Skip invalid slice lengths
+                continue
+
+            for i in range(len(content) - key_len + 1):
+                slice_text = content[i:i + key_len]
+
+                if self.method == "fuzzywuzzy":
+                    if fuzz.partial_ratio(keyword.lower(), slice_text.lower()) >= threshold:
+                        return True
+
+                elif self.method == "difflib":
+                    if SequenceMatcher(None, keyword.lower(), slice_text.lower()).ratio() >= threshold:
+                        return True
+
+                elif self.method == "fuzzysearch":
+                    matches = find_near_matches(keyword, slice_text, max_l_dist=max_dist)
+                    if matches:
+                        return True
+
+                elif self.method == "cosine":
+                    #print(slice_text, "slice text")
+                    #print(keyword, "keyword")
+                    vectorizer = TfidfVectorizer().fit_transform([slice_text, keyword])
+                    similarity = cosine_similarity(vectorizer[0:1], vectorizer[1:2])
+                    #print(similarity, "similarity")
+                    if similarity[0, 0] >= threshold:
+                        return True
+
+                #elif self.method == "semantic" and self.nlp:
+                    #keyword_doc = self.nlp(keyword)
+                    #slice_doc = self.nlp(slice_text)
+                    #if slice_doc.similarity(keyword_doc) >= threshold:
+                        #return True
+
+        return False
 
 
 def get_sorted_files(segment_dir, segment_number):
@@ -155,12 +190,58 @@ def process_files(base_dir, segment_number, keyword):
             # Use the working_text variable as needed
             print(f"Working text for file {filepath}:\n{working_text}\n{'-'*50}")
 
-# Parameters
-base_directory = '/segment'  # Base directory where segments are stored
-segment_num = '355'          # Current segment number as a string
-search_keyword = 'Fiat'      # Keyword to search for
 
 # Process the files
-process_files(base_directory, segment_num, search_keyword)
+#process_files(base_directory, segment_num, search_keyword)
+
+
+# Example content and keyword
+# bogus match
+#content = "[potentially long other text here] Fier Lama [potentially long other text here]"
+#keyword = "Fiat Lux"
+# [matches: False False False False False False], as intended
+
+# actual potential match
+#content = "[potentially long other text here] Fiai La>< [potentially long other text here]"
+#keyword = "Fiat Lux"
+# [matches: False False True True True False]
+
+# near perfect match
+content = "[potentially long other text here] Fiat Luce [potentially long other text here]"
+keyword = "Fiat Lux"
+# [matches: True True True True True True]
+
+# Exact match
+matcher_exact = TextMatcher(method="exact")
+print(matcher_exact.match(content, keyword))
+
+# Regex match
+matcher_regex = TextMatcher(method="regex")
+print(matcher_regex.match(content, keyword))
+
+# Fuzzy match
+matcher_fuzzy = TextMatcher(method="fuzzywuzzy", threshold=60)
+print(matcher_fuzzy.match(content, keyword))
+#(make or break threshold: 55/60)
+
+# Difflib match
+matcher_difflib = TextMatcher(method="difflib", threshold=0.55)
+print(matcher_difflib.match(content, keyword))
+#(make or break threshold: 0.50/0.55)
+
+
+# Fuzzysearch match
+matcher_fuzzysearch = TextMatcher(method="fuzzysearch", max_dist=3)
+print(matcher_fuzzysearch.match(content, keyword))
+#(make or break threshold: 3/4)
+
+# Cosine similarity
+matcher_cosine = TextMatcher(method="cosine", threshold=0.3)
+print(matcher_cosine.match(content, keyword))
+# 0.3 adjusted to the Fiat Luce case
+
+# Semantic similarity
+#matcher_semantic = TextMatcher(method="semantic", threshold=0.8)
+#print(matcher_semantic.match(content, keyword))  # True
 
 
