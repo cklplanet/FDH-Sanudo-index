@@ -49,10 +49,7 @@ try:
       all_names = set(place_names)  # Ensuring no duplicates within this set
       
       for place in all_names:
-        # Check if the place is already in the results list
-          existing_result = next((result for result in results_list if result["place_name"] == place), None)
-
-          #  Skip already processed place names
+          #  Skip already processed place names or "veneziano"
           if place in processed_names or place in existed_names or place == 'veneziano':
               continue
 
