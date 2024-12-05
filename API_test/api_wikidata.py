@@ -1,5 +1,6 @@
 import requests
 
+# Bug fixed: 1, Venice is not a Country; 2, Veneto is not Venice
 def get_label_for_id(q_id):
     """
     Fetch the label for a given Wikidata entity ID.
@@ -75,7 +76,7 @@ def get_entity_data(entity_id):
         'P276': 'Location',
         'P131': 'Administrative Entity',
         'P625': 'Coordinates',
-        'P17': 'Country',
+        # 'P17': 'Country',
         'P291': 'Locale',
         'P150': 'Metropolitan City',
         'P36': 'Capital'
@@ -129,16 +130,15 @@ def get_venice_related_entities(entity_name):
         for key, values in entity_data.items()
         for value in (values if isinstance(values, list) else [values])
     )
+    # print(is_in_venice)
 
     # Check the description too
     url = f"https://www.wikidata.org/w/api.php?action=wbgetentities&ids={entity_id}&props=descriptions&languages=en&format=json"
     response = requests.get(url)
     data = response.json()
     description = data['entities'][entity_id].get('descriptions', {}).get('en', {}).get('value', "")
-
     # Expand the check to include descriptions as well
     is_in_venice = is_in_venice or any(keyword in description.lower() for keyword in venice_keywords)
-
     # Step 4: If related to Venice, add to the list of related entities
     if is_in_venice:
         related_entities.append(entity_data)
@@ -211,4 +211,4 @@ def show_all_the_ID (entity_name):
         # print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
 
-# print(wikidata_is_in_venice("verona"))
+# print(wikidata_is_in_venice("Murano"))
