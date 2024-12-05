@@ -131,8 +131,8 @@
             "109"
         ],
         "nominatim_coords": [
-            "45.46362110011067",
-            "12.261749419829439"
+            "45.4592181",
+            "12.2616745"
         ],
         "geodata_coords": [
             "45.46161",
@@ -501,31 +501,6 @@
     },
     {
         "id": 17,
-        "place_name": "veneziano",
-        "place_alternative_name": [
-            "Gambarare"
-        ],
-        "place_index": [
-            "194"
-        ],
-        "nominatim_coords": [
-            "45.4653057",
-            "12.1176521"
-        ],
-        "geodata_coords": [
-            "45.49812",
-            "12.21909"
-        ],
-        "wikidata_coords": null,
-        "nominatim_match": true,
-        "geodata_match": true,
-        "wikidata_match": false,
-        "latitude": "45.49812",
-        "longitude": "12.21909",
-        "agreement_count": 2
-    },
-    {
-        "id": 18,
         "place_name": "Gambarare",
         "place_alternative_name": [
             "veneziano"
@@ -550,7 +525,7 @@
         "agreement_count": 2
     },
     {
-        "id": 19,
+        "id": 18,
         "place_name": "Gradisca",
         "place_alternative_name": [],
         "place_index": [
@@ -565,20 +540,20 @@
             "584"
         ],
         "nominatim_coords": [
-            "45.710285619488076",
-            "12.983527358289223"
+            "45.7100372",
+            "12.9851577"
         ],
         "geodata_coords": null,
         "wikidata_coords": null,
         "nominatim_match": true,
         "geodata_match": false,
         "wikidata_match": false,
-        "latitude": "45.710285619488076",
-        "longitude": "12.983527358289223",
+        "latitude": "45.7100372",
+        "longitude": "12.9851577",
         "agreement_count": 1
     },
     {
-        "id": 20,
+        "id": 19,
         "place_name": "Italia",
         "place_alternative_name": [],
         "place_index": [
@@ -650,7 +625,7 @@
         "agreement_count": 1
     },
     {
-        "id": 21,
+        "id": 20,
         "place_name": "Lizza Fusina",
         "place_alternative_name": [
             "veneziano"
@@ -673,7 +648,7 @@
         "agreement_count": 1
     },
     {
-        "id": 22,
+        "id": 21,
         "place_name": "Marano",
         "place_alternative_name": [
             "FrìuliX"
@@ -702,11 +677,11 @@
         "agreement_count": 1
     },
     {
-        "id": 23,
+        "id": 22,
         "place_name": "Marghera",
         "place_alternative_name": [
-            "veneziano",
-            "Margera"
+            "Margera",
+            "veneziano"
         ],
         "place_index": [
             "111",
@@ -738,7 +713,7 @@
         "agreement_count": 3
     },
     {
-        "id": 24,
+        "id": 23,
         "place_name": "isola presso Venezia",
         "place_alternative_name": [
             "MaBEorbo"
@@ -760,7 +735,7 @@
         "agreement_count": 1
     },
     {
-        "id": 25,
+        "id": 24,
         "place_name": "Mestre",
         "place_alternative_name": [
             "veneziano"
@@ -791,7 +766,7 @@
         "agreement_count": 2
     },
     {
-        "id": 26,
+        "id": 25,
         "place_name": "Mirano",
         "place_alternative_name": [
             "veneziano"
@@ -813,11 +788,11 @@
         "agreement_count": 1
     },
     {
-        "id": 27,
+        "id": 26,
         "place_name": "Malvasia vecchia",
         "place_alternative_name": [
-            "Monembasia",
-            "Grecia"
+            "Grecia",
+            "Monembasia"
         ],
         "place_index": [
             "58",
@@ -826,20 +801,20 @@
             "629"
         ],
         "nominatim_coords": [
-            "45.43287707023478",
-            "12.332320518633457"
+            "45.4329389",
+            "12.3323546"
         ],
         "geodata_coords": null,
         "wikidata_coords": null,
         "nominatim_match": true,
         "geodata_match": false,
         "wikidata_match": false,
-        "latitude": "45.43287707023478",
-        "longitude": "12.332320518633457",
+        "latitude": "45.4329389",
+        "longitude": "12.3323546",
         "agreement_count": 1
     },
     {
-        "id": 28,
+        "id": 27,
         "place_name": "Murano",
         "place_alternative_name": [
             "isola presso Venezia"
@@ -870,11 +845,11 @@
         "agreement_count": 3
     },
     {
-        "id": 29,
+        "id": 28,
         "place_name": "Oriago",
         "place_alternative_name": [
-            "Uriago",
-            "veneziano"
+            "veneziano",
+            "Uriago"
         ],
         "place_index": [
             "66",
@@ -905,7 +880,7 @@
         "agreement_count": 1
     },
     {
-        "id": 30,
+        "id": 29,
         "place_name": "chiesa di s. Giustina",
         "place_alternative_name": [],
         "place_index": [
@@ -925,7 +900,7 @@
         "agreement_count": 1
     },
     {
-        "id": 31,
+        "id": 30,
         "place_name": "Baffo",
         "place_alternative_name": [
             "Pafo",
@@ -956,7 +931,7 @@
         "agreement_count": 1
     },
     {
-        "id": 32,
+        "id": 31,
         "place_name": "Ponente",
         "place_alternative_name": [
             "cioè stati e mari del ponente"
@@ -982,6 +957,27 @@
         "wikidata_match": false,
         "latitude": "45.51903715",
         "longitude": "12.686205727401017",
+        "agreement_count": 1
+    },
+    {
+        "id": 32,
+        "place_name": "Porto Secco",
+        "place_alternative_name": [],
+        "place_index": [
+            "56",
+            "143"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": [
+            "45.30861",
+            "12.31444"
+        ],
+        "wikidata_coords": null,
+        "nominatim_match": false,
+        "geodata_match": true,
+        "wikidata_match": false,
+        "latitude": "45.30861",
+        "longitude": "12.31444",
         "agreement_count": 1
     },
     {
@@ -1173,8 +1169,8 @@
             "5ft2"
         ],
         "nominatim_coords": [
-            "45.43777295172513",
-            "12.335590408970237"
+            "45.4356417",
+            "12.3296608"
         ],
         "geodata_coords": null,
         "wikidata_coords": [
@@ -1263,17 +1259,20 @@
             "45.4371908",
             "12.3345898"
         ],
-        "geodata_coords": null,
+        "geodata_coords": [
+            "45.43713",
+            "12.33265"
+        ],
         "wikidata_coords": [
             45.439722222222,
             12.331944444444
         ],
         "nominatim_match": true,
-        "geodata_match": false,
+        "geodata_match": true,
         "wikidata_match": true,
         "latitude": 45.439722222222,
         "longitude": 12.331944444444,
-        "agreement_count": 2
+        "agreement_count": 3
     },
     {
         "id": 45,
@@ -1283,16 +1282,16 @@
             "593"
         ],
         "nominatim_coords": [
-            "45.44071038690553",
-            "12.340345324249416"
+            "45.4407352",
+            "12.3403687"
         ],
         "geodata_coords": null,
         "wikidata_coords": null,
         "nominatim_match": true,
         "geodata_match": false,
         "wikidata_match": false,
-        "latitude": "45.44071038690553",
-        "longitude": "12.340345324249416",
+        "latitude": "45.4407352",
+        "longitude": "12.3403687",
         "agreement_count": 1
     },
     {
@@ -1357,31 +1356,6 @@
     },
     {
         "id": 49,
-        "place_name": "Zueca",
-        "place_alternative_name": [
-            "Giudecca"
-        ],
-        "place_index": [
-            "384",
-            "397",
-            "416",
-            "487"
-        ],
-        "nominatim_coords": null,
-        "geodata_coords": null,
-        "wikidata_coords": [
-            45.425,
-            12.328611111111
-        ],
-        "nominatim_match": false,
-        "geodata_match": false,
-        "wikidata_match": true,
-        "latitude": 45.425,
-        "longitude": 12.328611111111,
-        "agreement_count": 1
-    },
-    {
-        "id": 50,
         "place_name": "Giudecca",
         "place_alternative_name": [
             "Zueca"
@@ -1407,6 +1381,31 @@
         "latitude": 45.425,
         "longitude": 12.328611111111,
         "agreement_count": 2
+    },
+    {
+        "id": 50,
+        "place_name": "Zueca",
+        "place_alternative_name": [
+            "Giudecca"
+        ],
+        "place_index": [
+            "384",
+            "397",
+            "416",
+            "487"
+        ],
+        "nominatim_coords": null,
+        "geodata_coords": null,
+        "wikidata_coords": [
+            45.425,
+            12.328611111111
+        ],
+        "nominatim_match": false,
+        "geodata_match": false,
+        "wikidata_match": true,
+        "latitude": 45.425,
+        "longitude": 12.328611111111,
+        "agreement_count": 1
     },
     {
         "id": 51,
@@ -1438,16 +1437,16 @@
             "448"
         ],
         "nominatim_coords": [
-            "45.481567",
-            "12.2164347"
+            "45.48205851341436",
+            "12.216642444658232"
         ],
         "geodata_coords": null,
         "wikidata_coords": null,
         "nominatim_match": true,
         "geodata_match": false,
         "wikidata_match": false,
-        "latitude": "45.481567",
-        "longitude": "12.2164347",
+        "latitude": "45.48205851341436",
+        "longitude": "12.216642444658232",
         "agreement_count": 1
     },
     {
