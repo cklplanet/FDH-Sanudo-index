@@ -38,7 +38,7 @@ def search_entity_id(entity_name):
     # print("Search results for verification:")
     entity_ids = []
     for result in results:
-        print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
+        # print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
     
     # # Return list of entity IDs
@@ -205,10 +205,10 @@ def show_all_the_ID (entity_name):
     results = response.json().get('search', [])
     
     # Display search results for validation
-    print("Search results for verification:")
+    # print("Search results for verification:")
     entity_ids = []
     for result in results:
-        print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
+        # print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
 
-print(wikidata_is_in_venice("verona"))
+# print(wikidata_is_in_venice("verona"))
