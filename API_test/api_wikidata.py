@@ -38,7 +38,7 @@ def search_entity_id(entity_name):
     # print("Search results for verification:")
     entity_ids = []
     for result in results:
-        # print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
+        print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
     
     # # Return list of entity IDs
@@ -114,7 +114,7 @@ def get_venice_related_entities(entity_name):
         # print(f"No entity found for '{entity_name}'")
         return None
 
-    venice_keywords = ["venice", "venetian", "veneto", "venezia"]
+    venice_keywords = ["venice", "venetian", "venezia"]
     related_entities = []
 
     # for entity_id in entity_ids:
@@ -211,4 +211,4 @@ def show_all_the_ID (entity_name):
         print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
 
-# print(wikidata_is_in_venice("italU"))
+print(wikidata_is_in_venice("verona"))
