@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.index, .info {
+    width: 20%;
+    background-color: #EFDABF;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.book {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-number {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+td.highlight {
+    background-color: yellow;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+table td {
+    color: #2B1B19;
+}
+
+hr {
+    border: 1px solid #ddd;
+    width: 90%;
+    margin: 10px 0;
+}
