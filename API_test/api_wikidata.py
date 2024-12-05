@@ -36,10 +36,10 @@ def search_entity_id(entity_name):
     
     # # Display search results for validation
     # print("Search results for verification:")
-    # entity_ids = []
-    # for result in results:
-    #     print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
-    #     entity_ids.append(result['id'])
+    entity_ids = []
+    for result in results:
+        # print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
+        entity_ids.append(result['id'])
     
     # # Return list of entity IDs
     # return entity_ids if entity_ids else None
@@ -114,14 +114,14 @@ def get_venice_related_entities(entity_name):
         # print(f"No entity found for '{entity_name}'")
         return None
 
-    venice_keywords = ["venice", "venetian", "veneto", "venitian"]
+    venice_keywords = ["venice", "venetian", "veneto", "venezia"]
     related_entities = []
 
     # for entity_id in entity_ids:
     # Step 2: Retrieve data for the found entity ID
     entity_data = get_entity_data(entity_id)
 
-    if "italy" in entity_name.lower():
+    if ("italy"or"italia"or"italian") in entity_name.lower():
         return None
     # Step 3: Check if any of the properties or descriptions contain Venice-related keywords
     is_in_venice = any(
@@ -173,18 +173,20 @@ def get_venice_related_entities(entity_name):
 # place = "Giudecca" # 3 pass
 # place = "Rialto Bridge" # 1 fail: wikidata
 # # place = "Noale" # 2 fail: wikidata, geodata
-# entity_name = "Rialto Bridge"
+# entity_name = "italia"
 # entity_info = get_venice_related_entities(entity_name)
 # print("Filtered Related Entity Information:", entity_info)
 
 def wikidata_is_in_venice(location_name):
+    location_name=location_name.lower()
     # Call get_wikidata_info and format the output
-    info = get_venice_related_entities(location_name)
-    
-    if info:
-        # Return all entities that might be in Venice, with coordinates if available
-        # return info
-        return info['Coordinates'][0]
+    if(location_name!="italia" and location_name!="italy" and location_name!="italu"
+       and location_name!="venezia" and location_name!="venice" and location_name!="veneto"):
+        info = get_venice_related_entities(location_name)
+        if info:
+            # Return all entities that might be in Venice, with coordinates if available
+            # return info
+            return info['Coordinates'][0]
     else:
         return None
     
@@ -209,4 +211,4 @@ def show_all_the_ID (entity_name):
         print(f"ID: {result['id']}, Label: {result['label']}, Description: {result.get('description', 'No description')}")
         entity_ids.append(result['id'])
 
-print(wikidata_is_in_venice("Giudecca"))
+# print(wikidata_is_in_venice("italU"))
