@@ -181,7 +181,7 @@ def wikidata_is_in_venice(location_name):
     location_name=location_name.lower()
     # Call get_wikidata_info and format the output
     if(location_name!="italia" and location_name!="italy" and location_name!="italu"
-       and location_name!="venezia" and location_name!="venice" and location_name!="veneto"):
+       and location_name!="venezia" and location_name!="venice" and location_name!="veneto" and location_name!="veneziano"):
         info = get_venice_related_entities(location_name)
         if info:
             # Return all entities that might be in Venice, with coordinates if available

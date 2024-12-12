@@ -3,7 +3,7 @@ import os
 from three_api_check import nominatim_is_in_venice, geodata_is_in_venice, wikidata_is_in_venice
 
 # Define the path to the JSON file
-json_file_path = os.path.join(os.getcwd(), "example_place_extraction_results.json")
+json_file_path = os.path.join(os.getcwd(), "../cleaned_place_extraction_results.json")
 output_file_path = os.path.join(os.getcwd(), "data_analysis_results.json") # or data_analysis_results.json
 
 # Load the JSON data

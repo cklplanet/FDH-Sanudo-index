@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from geopy.distance import geodesic
 
 # Load results into a DataFrame
-output_file_path = "data_analysis/data_analysis_results.json"
+output_file_path = "data_analysis_results.json"
 results_df = pd.read_json(output_file_path)
 
 print(results_df.head())  # Inspect the first few rows
