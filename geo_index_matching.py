@@ -28,7 +28,7 @@ for m in ['exact','regex','fuzzywuzzy','difflib','fuzzysearch']:
     our_matcher = MatcherWrapper(method=m)
 
     results = []
-    with open('place_verification_results.json', 'r') as file:
+    with open('data_analysis/data_analysis_results.json', 'r') as file:
         data = json.load(file)
     for place in data:
         place_names = [place['place_name']]
