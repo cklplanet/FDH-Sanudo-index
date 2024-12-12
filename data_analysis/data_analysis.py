@@ -2,6 +2,7 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 from geopy.distance import geodesic
+from datetime import datetime
 
 # Load results into a DataFrame
 output_file_path = "data_analysis/data_analysis_results.json"
@@ -112,4 +113,26 @@ summary = {
     "Potential Conflicts (Large Distance Differences)": len(potential_conflicts)
 }
 
-print(json.dumps(summary, indent=4))
+# Log the summary to a file with date and time
+log_file_path = "data_analysis/log.txt"
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+with open(log_file_path, "a") as log_file:
+    log_file.write(f"{current_time} - Summary:\n")
+    log_file.write(json.dumps(summary, indent=4))
+    log_file.write("\n\n")
+
+    if potential_conflicts:
+        log_file.write(f"{current_time} - Potential Conflicts (Large Distance Differences):\n")
+        for conflict in potential_conflicts:
+            conflict_details = {
+                "place_name": conflict["place_name"],
+                "coordinates": {
+                    list(conflict.keys())[1]: conflict[list(conflict.keys())[1]],
+                    list(conflict.keys())[2]: conflict[list(conflict.keys())[2]],
+                },
+                "distance": conflict["distance"],
+            }
+            log_file.write(json.dumps(conflict_details, indent=4))
+            log_file.write("\n")
+    else:
+        log_file.write(f"{current_time} - No Potential Conflicts Detected.\n")

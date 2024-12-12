@@ -1,0 +1,92 @@
+2024-12-05 14:06:44 - Summary:
+{
+    "Total Places Processed": 62,
+    "API Success Rates": {
+        "Nominatim": "69.35%",
+        "Geodata": "12.90%",
+        "Wikidata": "45.16%"
+    },
+    "Disagreements": 13,
+    "Agreement Distribution": {
+        "1": 49,
+        "2": 9,
+        "3": 4
+    },
+    "Potential Conflicts (Large Distance Differences)": 2
+}
+
+2024-12-05 14:06:44 - Potential Conflicts (Large Distance Differences):
+{
+    "place_name": "Marghera",
+    "coordinates": {
+        "nominatim_coords": [
+            "45.4758097",
+            "12.2247811"
+        ],
+        "geodata_coords": [
+            "45.45111",
+            "12.22389"
+        ]
+    },
+    "distance": 2746.029771315006
+}
+{
+    "place_name": "Marghera",
+    "coordinates": {
+        "geodata_coords": [
+            "45.45111",
+            "12.22389"
+        ],
+        "wikidata_coords": [
+            45.47547,
+            12.22465
+        ]
+    },
+    "distance": 2708.043038810729
+}
+2024-12-12 14:36:35 - Summary:
+{
+    "Total Places Processed": 62,
+    "API Success Rates": {
+        "Nominatim": "69.35%",
+        "Geodata": "12.90%",
+        "Wikidata": "45.16%"
+    },
+    "Disagreements": 13,
+    "Agreement Distribution": {
+        "1": 49,
+        "2": 9,
+        "3": 4
+    },
+    "Potential Conflicts (Large Distance Differences)": 2
+}
+
+2024-12-12 14:36:35 - Potential Conflicts (Large Distance Differences):
+{
+    "place_name": "Marghera",
+    "coordinates": {
+        "nominatim_coords": [
+            "45.4758097",
+            "12.2247811"
+        ],
+        "geodata_coords": [
+            "45.45111",
+            "12.22389"
+        ]
+    },
+    "distance": 2746.029771315006
+}
+{
+    "place_name": "Marghera",
+    "coordinates": {
+        "geodata_coords": [
+            "45.45111",
+            "12.22389"
+        ],
+        "wikidata_coords": [
+            45.47547,
+            12.22465
+        ]
+    },
+    "distance": 2708.043038810729
+}

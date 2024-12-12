@@ -56,7 +56,7 @@ try:
           results = {
               "id": next_id,
               "place_name": place,
-              "place_alternative_name": list(all_names - {place}),  # Excluding the main name for alternatives
+                "place_alternative_name": list((all_names - {place}) - {"veneziano"}),  # Excluding the main name for alternatives
               "place_index": columns,  # The column index from the JSON data
               "nominatim_coords": None,
               "geodata_coords": None,
