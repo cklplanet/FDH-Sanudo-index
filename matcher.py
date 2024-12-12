@@ -65,7 +65,8 @@ class TextMatcher:
 
                 elif self.method == "regex":
                     pattern = re.compile(re.escape(sliced_key), re.IGNORECASE)
-                    if pattern.fullmatch(slice_text):
+                    #TODO
+                    if pattern.fullmatch(content):
                         return True
 
         return False
@@ -243,7 +244,7 @@ def process_files(base_dir, segment_number, keywords, matcher):
                         else:
                             # No more next directories
                             break
-
+                #print("----#----#-----", working_text)
                 results.append({'Place':keywords, 'Column No.': segment_number, 'Paragraph':working_text})
     unique_results = []
     seen = set()
@@ -254,7 +255,7 @@ def process_files(base_dir, segment_number, keywords, matcher):
         if t not in seen:
             seen.add(t)
             unique_results.append(d)
-    return unique_results
+    return unique_results, len(unique_results)
 
 
 # Process the files

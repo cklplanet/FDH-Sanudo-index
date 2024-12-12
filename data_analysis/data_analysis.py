@@ -5,7 +5,7 @@ from geopy.distance import geodesic
 from datetime import datetime
 
 # Load results into a DataFrame
-output_file_path = "data_analysis/data_analysis_results.json"
+output_file_path = "data_analysis_results.json"
 results_df = pd.read_json(output_file_path)
 
 print(results_df.head())  # Inspect the first few rows
@@ -30,7 +30,8 @@ plt.xlabel("API", fontsize=12)
 plt.ylabel("Number of Matches", fontsize=12)
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=10)
-plt.show()
+plt.savefig("../Graphs/api_success_rate.png")
+plt.close()
 
 # Agreement stats
 agreement_counts = results_df["agreement_count"].value_counts()
@@ -39,7 +40,8 @@ print(agreement_counts)
 
 # Plot agreement count distribution
 agreement_counts.plot(kind='bar', title="API Agreement Levels", xlabel="Number of Unique Coordinate Sets", ylabel="Frequency")
-plt.show()
+plt.savefig("../Graphs/api_agreement_level.png")
+plt.close()
 
 
 # Filter rows with disagreements
@@ -52,7 +54,8 @@ results_df["agreement_count"].hist(bins=[1, 2, 3, 4], grid=False)
 plt.title("Agreement Distribution")
 plt.xlabel("Number of Unique Coordinate Sets")
 plt.ylabel("Frequency")
-plt.show()
+plt.savefig("../Graphs/api_agreement_dist.png")
+plt.close()
 
 ################## CHECK COORDINATE DIFFERENCE #############################
 

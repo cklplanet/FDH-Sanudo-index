@@ -1,6 +1,7 @@
 from matcher import *
 import json
 import pandas as pd
+import matplotlib.pyplot as plt
 
 class MatcherWrapper:
     def __init__(self, method="exact"):
@@ -19,21 +20,38 @@ class MatcherWrapper:
             self.matcher = TextMatcher(method="cosine", threshold=0.3)
 
 
-our_matcher = MatcherWrapper(method="exact")
+# Initialize the total hits dictionary for all indices
+total_hits = {i: 0 for i in range(679)}
 
-results = []
-with open('place_verification_results_trunc.json', 'r') as file:
-    data = json.load(file)
-for place in data[0:10]:
-    place_names = [place['place_name']]
-    place_names.extend(place['place_alternative_name'])
-    indices = [int(x) for x in place['place_index'] if x.isnumeric()]
-    for index in indices:
-        try:
-            result = process_files("paragraphs", index, place_names, our_matcher.matcher)
-            results.extend(result)
-        except:
-            continue
+for m in ['exact','regex','fuzzywuzzy','difflib','fuzzysearch']:
 
-final = pd.DataFrame(results)
-final.to_csv("tentative_results.csv")
+    our_matcher = MatcherWrapper(method=m)
+
+    results = []
+    with open('place_verification_results.json', 'r') as file:
+        data = json.load(file)
+    for place in data:
+        place_names = [place['place_name']]
+        place_names.extend(place['place_alternative_name'])
+        indices = [int(x) for x in place['place_index'] if x.isnumeric()]
+        for index in indices:
+            try:
+                result, num_hits = process_files("paragraphs", index, place_names, our_matcher.matcher)
+                total_hits[index] += num_hits
+                results.extend(result)
+            except:
+                continue
+
+    final = pd.DataFrame(results)
+    final.to_csv(f"matching_results/{m}.csv")
+
+    indices = list(total_hits.keys())
+    hits = list(total_hits.values())
+
+    plt.figure(figsize=(12, 6))
+    plt.bar(indices, hits)
+    plt.xlabel('Index')
+    plt.ylabel('Total Hits')
+    plt.title(f'Total Hits Across All Indices, Method: {m}')
+    plt.savefig(f'Graphs/{m}.png')
+    plt.show()

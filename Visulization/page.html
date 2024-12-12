@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanudo Diary Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Sanudo's Diary Index</h1>
+        <h4> Volumn XII (29)</h4>
+        <span style="display: inline-block; padding: 8px 16px; background-color: #EFDABF; color: white; font-weight: bold; border-radius: 4px; margin-right: 10px;">
+            <a href="https://archive.org/details/idiariidimarino48sanugoog/page/n163/mode/2up" target="_blank" style="color: white;">[Click to go to Internet Archive]</a>
+        </span>
+        <hr>
+    </div>
+
+    <div class="container">
+        <div class="index" id="index">
+            <input type="text" id="searchBox" placeholder="Search for a place" onkeyup="searchPlace()">
+            <ul id="placeList"></ul>
+            <div class="pagination">
+                <button id="prevButton" onclick="changePage(-1)">Prev</button>
+                <button id="nextButton" onclick="changePage(1)">Next</button>
+            </div>
+        </div>
+
+        <div class="book" id="book">
+            <div id="columnNumber" class="column-number">Column Number: </div>
+            <div class="column-container">
+                <div class="column" id="columnLeft"></div>
+                <div class="column" id="columnRight"></div>
+            </div>
+        </div>
+
+        <div class="info" id="info">
+            <h2>Related Information</h2>
+            <table id="infoTable">
+                <tr><th>Character</th><th>Details</th></tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
