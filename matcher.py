@@ -288,18 +288,18 @@ if __name__ == "__main__":
     print(matcher_regex.match(content, keyword))
 
     # Fuzzy match
-    matcher_fuzzy = TextMatcher(method="fuzzywuzzy", threshold=60)
+    matcher_fuzzy = TextMatcher(method="fuzzywuzzy", threshold=70)
     print(matcher_fuzzy.match(content, keyword))
     #(make or break threshold: 55/60)
 
     # Difflib match
-    matcher_difflib = TextMatcher(method="difflib", threshold=0.55)
+    matcher_difflib = TextMatcher(method="difflib", threshold=0.65)
     print(matcher_difflib.match(content, keyword))
     #(make or break threshold: 0.50/0.55)
 
 
     # Fuzzysearch match
-    matcher_fuzzysearch = TextMatcher(method="fuzzysearch", max_dist=3)
+    matcher_fuzzysearch = TextMatcher(method="fuzzysearch", max_dist=2)
     print(matcher_fuzzysearch.match(content, keyword))
     #(make or break threshold: 3/4)
 
