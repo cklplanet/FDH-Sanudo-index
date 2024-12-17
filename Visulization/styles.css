@@ -17,9 +17,22 @@ body {
     width: 100%;
 }
 
+/* For the table or container where characters are listed */
+.character-table {
+    border-collapse: collapse; /* Make sure borders between cells collapse into one line */
+    width: 100%; /* Optional: Ensure it spans the full width */
+}
+
+/* For individual characters or specific rows, if needed */
+.character-row {
+    padding: 10px; 
+    border-bottom: 1px solid #000000; /* Apply darker border to each row */
+}
+
+
 .index, .info {
     width: 20%;
-    background-color: #EFDABF;
+    background-color: #f8e71c;
     padding: 10px;
     border-radius: 5px;
     height: 100vh;
@@ -33,21 +46,90 @@ body {
     align-items: center;
 }
 
+/* Align the column number and buttons to the right */
+.column-info {
+    display: flex;
+    justify-content: space-between; /* Position buttons and place name at opposite ends */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .column-number {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.column-number button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.column-number span {
+    margin: 0 10px;
+}
+
+.place-name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #EFDABF;
+    color: white;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+#currentPlaceName {
+    font-weight: lighter;
+    color: black;          /* Set text color to black */
+    background: none;      /* Remove background */
+    text-align: left;      /* Align text to the left */
+    margin: 0;             /* Optional: remove any default margin */
+    padding: 5px 0;        /* Optional: adjust padding for better spacing */
+    font-size: 16px;       /* Optional: adjust font size */
+}
+
+
+/* Make sure to align the pagination buttons correctly */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+/* .column-number {
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 15px;
     text-align: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+} */
 
 .column-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
+/* Add this to your CSS file */
+.selected-place {
+    background-color: rgba(0, 0, 0, 0.1); /* Darken background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Optional: space around the name */
+}
+
+
+
+
 .column {
-    width: 48%;
+    width: 95%;  /* Adjust to take up most of the space */
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
@@ -79,24 +161,52 @@ th, td {
 }
 
 td.highlight {
-    background-color: yellow;
+    background-color: #f8e71c;
 }
 
-.pagination {
+/* .pagination {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-}
+} */
 
 button {
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     cursor: pointer;
+    background-color: #e5e9ea;
+    color: #2B1B19;
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: #01afd1;
+}
+
+button:disabled {
+    background-color: #9c9c9c;
+    cursor: not-allowed;
+}
+
+.nav-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #EFDABF;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    color: #2B1B19;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-button:hover {
+    background-color: #01afd1;
+}
+
+.nav-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 table td {
@@ -107,4 +217,9 @@ hr {
     border: 1px solid #ddd;
     width: 90%;
     margin: 10px 0;
+}
+
+span.highlight {
+    background-color: yellow;
+    font-weight: bold;
 }
